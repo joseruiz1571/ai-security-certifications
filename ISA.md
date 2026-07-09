@@ -2,7 +2,7 @@
 project: ai-security-certifications
 task: Self-updating registry of all AI security certifications
 effort: E3
-phase: verify
+phase: complete
 progress: 36/36
 mode: standard
 started: 2026-07-08

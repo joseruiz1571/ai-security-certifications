@@ -39,5 +39,6 @@ spawnSync(["git", "add", "-A"], { cwd: root });
 spawnSync(["git", "commit", "-m", `refresh: automated update ${new Date().toISOString().slice(0, 10)}`], {
   cwd: root,
 });
+spawnSync(["git", "push"], { cwd: root });
 
 console.log(`Refresh complete, exit=${claude.exitCode}. See refresh.log.`);
