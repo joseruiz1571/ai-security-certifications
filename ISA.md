@@ -2,8 +2,8 @@
 project: ai-security-certifications
 task: Self-updating registry of all AI security certifications
 effort: E3
-phase: execute
-progress: 0/36
+phase: verify
+progress: 36/36
 mode: standard
 started: 2026-07-08
 updated: 2026-07-08
@@ -37,46 +37,46 @@ A local git repo at `~/Code/github/joseruiz1571/ai-security-certifications` cont
 ## Criteria
 
 ### Dataset — named seed certs present with live-verified URL (probe: rg in data/certifications.yaml + agent fetch evidence)
-- [ ] ISC-1: CompTIA SecAI+ entry present with verified official URL
-- [ ] ISC-2: TryHackMe AI1 entry present with verified official URL
-- [ ] ISC-3: Practical DevSecOps Certified AI Security Professional entry present with verified URL
-- [ ] ISC-4: ISACA AAIA entry present with verified URL
-- [ ] ISC-5: ISACA AAIR entry present with verified URL
-- [ ] ISC-6: ISACA AAISM entry present with verified URL
-- [ ] ISC-7: IAPP AIGP entry present with verified URL
-- [ ] ISC-8: ISO/IEC 42001 Lead Auditor entry present with verified URL
-- [ ] ISC-9: GIAC AI platform security cert entry (exact current name) with verified URL
-- [ ] ISC-10: CSA TAISE entry present with verified URL
-- [ ] ISC-11: SecOps Group C-AI/MLPen entry present with verified URL
-- [ ] ISC-12: OffSec OSAI+ entry (exact current name/status) with verified URL
-- [ ] ISC-13: TCM Security PAPA entry present with verified URL
-- [ ] ISC-14: Learn Prompting AIRTP+ entry present with verified URL
-- [ ] ISC-15: HTB COAE entry present with verified URL
-- [ ] ISC-16: AWS AI cert entries (AI Practitioner at minimum) with verified URLs
-- [ ] ISC-17: Microsoft Azure AI cert entries (AI-900, AI-102 at minimum) with verified URLs
-- [ ] ISC-18: Google Cloud AI cert entries with verified URLs
-- [ ] ISC-19: Oracle OCI AI cert entries with verified URLs
-- [ ] ISC-20: NVIDIA AI cert entries with verified URLs
-- [ ] ISC-21: Linux Foundation AI cert entries with verified URLs
-- [ ] ISC-22: At least 2 certs beyond Jose's seed list discovered by sweep and included
-- [ ] ISC-23: Every entry has non-null name, org, category, focus, format, url, status, last_verified
+- [x] ISC-1: CompTIA SecAI+ entry present with verified official URL
+- [x] ISC-2: TryHackMe AI1 entry present with verified official URL
+- [x] ISC-3: Practical DevSecOps Certified AI Security Professional entry present with verified URL
+- [x] ISC-4: ISACA AAIA entry present with verified URL
+- [x] ISC-5: ISACA AAIR entry present with verified URL
+- [x] ISC-6: ISACA AAISM entry present with verified URL
+- [x] ISC-7: IAPP AIGP entry present with verified URL
+- [x] ISC-8: ISO/IEC 42001 Lead Auditor entry present with verified URL
+- [x] ISC-9: GIAC AI platform security cert entry (exact current name) with verified URL
+- [x] ISC-10: CSA TAISE entry present with verified URL
+- [x] ISC-11: SecOps Group C-AI/MLPen entry present with verified URL
+- [x] ISC-12: OffSec OSAI+ entry (exact current name/status) with verified URL
+- [x] ISC-13: TCM Security PAPA entry present with verified URL
+- [x] ISC-14: Learn Prompting AIRTP+ entry present with verified URL
+- [x] ISC-15: HTB COAE entry present with verified URL
+- [x] ISC-16: AWS AI cert entries (AI Practitioner at minimum) with verified URLs
+- [x] ISC-17: Microsoft Azure AI cert entries (AI-900, AI-102 at minimum) with verified URLs
+- [x] ISC-18: Google Cloud AI cert entries with verified URLs
+- [x] ISC-19: Oracle OCI AI cert entries with verified URLs
+- [x] ISC-20: NVIDIA AI cert entries with verified URLs
+- [x] ISC-21: Linux Foundation AI cert entries with verified URLs
+- [x] ISC-22: At least 2 certs beyond Jose's seed list discovered by sweep and included
+- [x] ISC-23: Every entry has non-null name, org, category, focus, format, url, status, last_verified
 
 ### Structure and tooling
-- [ ] ISC-24: Repo exists with git initialized and an initial commit containing all files
-- [ ] ISC-25: data/certifications.yaml parses without error under bun
-- [ ] ISC-26: scripts/generate.ts runs to completion with exit 0
-- [ ] ISC-27: Generated README.md contains every cert in the YAML (count parity check)
-- [ ] ISC-28: README groups certs into taxonomy categories with one table per category
-- [ ] ISC-29: README carries generated-on date and total-cert count
-- [ ] ISC-30: UPDATING.md documents the exact refresh workflow an agent or human follows
-- [ ] ISC-31: package.json defines bun scripts (generate at minimum)
-- [ ] ISC-32: Monthly scheduled refresh job exists and is listed by the scheduler
-- [ ] ISC-33: ISA.md lives at repo root with E3-required sections populated
+- [x] ISC-24: Repo exists with git initialized and an initial commit containing all files
+- [x] ISC-25: data/certifications.yaml parses without error under bun
+- [x] ISC-26: scripts/generate.ts runs to completion with exit 0
+- [x] ISC-27: Generated README.md contains every cert in the YAML (count parity check)
+- [x] ISC-28: README groups certs into taxonomy categories with one table per category
+- [x] ISC-29: README carries generated-on date and total-cert count
+- [x] ISC-30: UPDATING.md documents the exact refresh workflow an agent or human follows
+- [x] ISC-31: package.json defines bun scripts (generate at minimum)
+- [x] ISC-32: Monthly scheduled refresh job exists and is listed by the scheduler
+- [x] ISC-33: ISA.md lives at repo root with E3-required sections populated
 
 ### Anti-criteria
-- [ ] ISC-34: Anti: no URL in the dataset that was never live-fetched during this build (spot-check 5 return HTTP < 400)
-- [ ] ISC-35: Anti: no npm/npx invocation anywhere in repo scripts or docs
-- [ ] ISC-36: Anti: no Python files or python commands in the repo
+- [x] ISC-34: Anti: no URL in the dataset that was never live-fetched during this build (spot-check 5 return HTTP < 400)
+- [x] ISC-35: Anti: no npm/npx invocation anywhere in repo scripts or docs
+- [x] ISC-36: Anti: no Python files or python commands in the repo
 
 ## Test Strategy
 
@@ -119,4 +119,18 @@ A local git repo at `~/Code/github/joseruiz1571/ai-security-certifications` cont
 
 ## Verification
 
-(populated at VERIFY)
+- ISC-1..22: grep probe — every seed id present exactly once in data/certifications.yaml (giac- x3, aws-/azure-/gcp-/oci- x2, nvidia- x3); all URLs live-fetched by verification agents during build (2026-07-08)
+- ISC-23: generator's completeness check — exit 0 (fails hard on any null required field)
+- ISC-24: `git log` — commit 285664b "Initial build: 37 verified AI security certifications..."
+- ISC-25: `Bun.YAML.parse` — "YAML parses: 37 entries"
+- ISC-26: `bun scripts/generate.ts` — exit 0
+- ISC-27: README rows 37 == YAML entries 37 (grep count parity)
+- ISC-28: README has 5 `## ` category sections (grep -c = 5 + title)
+- ISC-29: README header — "37 certifications tracked. Generated 2026-07-09"
+- ISC-30: UPDATING.md written — full agent-executable refresh workflow with hard rules
+- ISC-31: package.json — generate + refresh scripts defined
+- ISC-32: `crontab -l` — "17 9 3 * *" entry present. NOTE: first live end-to-end run fires 2026-08-03 (headless claude cannot be test-run from inside this session); check refresh.log after that date
+- ISC-33: this file, E3 sections all populated
+- ISC-34: Anti — spot-check 5 URLs (CompTIA, ISACA, TCM, AWS, CSA): all HTTP 200
+- ISC-35: Anti — rg npm/npx across scripts/docs: 0 hits
+- ISC-36: Anti — zero .py files, zero python invocations in repo
