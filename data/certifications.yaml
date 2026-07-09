@@ -1,0 +1,559 @@
+# AI Security Certifications — source of truth
+# Edit this file, then run `bun run generate`. Never hand-edit README.md.
+# Categories: offensive | defensive | governance | management-systems | vendor-ai
+# Rule: every url must have been fetched live before entry. last_verified = date of that fetch.
+
+- id: tryhackme-ai1
+  name: TryHackMe AI Security Certification (AI1)
+  org: TryHackMe
+  category: offensive
+  focus: Hands-on attack and defense of real AI systems across threat modeling, prompt injection and jailbreaking, AI supply chain security, and RAG data poisoning.
+  format: 48-hour non-proctored browser-based practical exam; 4 sections, 13 hands-on scenarios; 70% to pass
+  level: Entry
+  cost_usd: null
+  prerequisites: Basic security background (networking, OS, core security concepts); no prior AI/ML experience needed
+  url: https://help.tryhackme.com/en/articles/15301082-ai1-exam-guide
+  status: available
+  launched: 2026-05
+  last_verified: "2026-07-08"
+  notes: Cert valid 3 years; prep is the AI Security learning path (5 modules, 25 rooms, included with Premium). Official cert page rate-limited during verification, so help-center exam guide cited.
+
+- id: secops-c-ai-mlpen
+  name: Certified AI/ML Pentester (C-AI/MLPen)
+  org: The SecOps Group
+  category: offensive
+  focus: Practical LLM/AI exploitation including direct and indirect prompt injection, RAG poisoning, training data manipulation, and LLM design vulnerabilities.
+  format: 4-hour hands-on practical exam (flag-based, VPN lab, on-demand, unproctored); 60% pass, 75% merit
+  level: Intermediate
+  cost_usd: 34
+  prerequisites: ~1 year professional pentesting experience recommended; OWASP Top 10 for LLMs familiarity
+  url: https://pentestingexams.com/certifications/professional/certified-ai-ml-pentester/
+  status: available
+  launched: 2024
+  last_verified: "2026-07-08"
+  notes: Heavily discounted at verification ($34 anniversary price, list $335); includes 1 free retake; exam-only model with no official training.
+
+- id: offsec-osai
+  name: OffSec AI Red Teamer (OSAI / OSAI+), course AI-300 Advanced AI Red Teaming
+  org: OffSec (Offensive Security)
+  category: offensive
+  focus: Assessing and exploiting modern AI systems — generative AI, LLMs, ML pipelines, and multi-agent environments — from an attacker's perspective.
+  format: 24-hour proctored hands-on red team engagement against a realistic AI-enabled enterprise environment; course + cert bundle
+  level: Advanced
+  cost_usd: 1749
+  prerequisites: Strong cybersecurity foundation; pentesting experience; OSCP or equivalent recommended
+  url: https://www.offsec.com/courses/ai-300/
+  status: available
+  launched: 2026-06
+  last_verified: "2026-07-08"
+  notes: Passing awards OSAI (never expires); OSAI+ tier expires after 3 years and requires renewal. $1,749 bundle = 90 days course access + 1 exam attempt.
+
+- id: tcm-papa
+  name: Practical AI Pentest Associate (PAPA)
+  org: TCM Security
+  category: offensive
+  focus: Full penetration test of an agentic AI application, assessed via exploitation plus a professional pentest report.
+  format: Hands-on practical exam — 2 full days of testing plus 2 days for report writing; no flags, no multiple choice; non-proctored
+  level: Entry
+  cost_usd: 199
+  prerequisites: Beginner IT knowledge; basic pentesting familiarity recommended
+  url: https://certifications.tcm-sec.com/papa/
+  status: available
+  launched: 2025-12
+  last_verified: "2026-07-08"
+  notes: $199 sale price at verification (regular $249); voucher includes 12-month access to AI 100 and AI Hacking 101 courses plus one free retake; cert does not expire.
+
+- id: learn-prompting-airtp-plus
+  name: AI Red Teaming Professional Certification (AIRTP+)
+  org: Learn Prompting
+  category: offensive
+  focus: Advanced techniques for attacking and securing LLMs — prompt injection, jailbreaking, AI red teaming, and defense strategies.
+  format: Proctored professional exam on scheduled dates; optional 6-week masterclass + exam bundle
+  level: Advanced
+  cost_usd: 299
+  prerequisites: Aimed at experienced cybersecurity/AI safety professionals; no coding required
+  url: https://learnprompting.org/certificates/ai-red-teaming-professional-certification
+  status: available
+  launched: 2025-01
+  last_verified: "2026-07-08"
+  notes: $299 exam-only (1 attempt) or $1,199 course + exam bundle (2 attempts). Cert valid only 1 year with CE renewal. Associate-level sibling AIRTA+ also exists.
+
+- id: htb-coae
+  name: HTB Certified Offensive AI Expert (HTB COAE)
+  org: Hack The Box
+  category: offensive
+  focus: Offensive AI expertise across adversarial ML, data poisoning, evasion attacks, prompt injection, LLM output exploitation, and AI privacy attacks.
+  format: 7-day hands-on practical exam requiring a commercial-grade technical report; capstone of the AI Red Teamer Job Role Path
+  level: Advanced
+  cost_usd: null
+  prerequisites: Completion of the HTB Academy AI Red Teamer Job Role Path
+  url: https://academy.hackthebox.com/news/the-new-htb-certified-offensive-ai-expert-htb-coae-is-officially-here
+  status: available
+  launched: 2026-04
+  last_verified: "2026-07-08"
+  notes: Launched April 2, 2026; developed in collaboration with Google and aligned with Google's SAIF. Reported ~$210 including 2 attempts (not confirmed on fetched page).
+
+- id: pdso-caisp
+  name: Certified AI Security Professional (CAISP)
+  org: Practical DevSecOps (HYSN Technologies)
+  category: offensive
+  focus: Hands-on AI security including LLM attacks (prompt injection, model poisoning, adversarial attacks), AI threat modeling with STRIDE/MITRE ATLAS, and AI supply chain security.
+  format: 6-hour task-oriented practical lab exam (5 challenges) plus 24 hours to submit a report
+  level: Intermediate
+  cost_usd: 1099
+  prerequisites: Basic Linux command-line knowledge; scripting helpful but not mandatory
+  url: https://www.practical-devsecops.com/certified-ai-security-professional/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: $1,099 at verification (list $1,199) including course — 3 years video access, 60 days browser labs, 36 CPEs. Lifetime credential. Listed in CISA NICCS catalog.
+
+- id: comptia-secai-plus
+  name: CompTIA SecAI+ (exam CY0-001)
+  org: CompTIA
+  category: defensive
+  focus: Securing AI systems, AI-assisted security operations, and AI governance/risk/compliance for experienced cybersecurity professionals.
+  format: Proctored exam, max 60 MCQ and performance-based questions, 60 minutes, passing 600/900
+  level: Intermediate
+  cost_usd: null
+  prerequisites: Recommended 3-4 years IT with 2+ years hands-on cybersecurity; Security+/CySA+/PenTest+ or equivalent recommended
+  url: https://www.comptia.org/en/certifications/secai/
+  status: available
+  launched: 2026-02
+  last_verified: "2026-07-08"
+  notes: Launched February 17, 2026 after beta; first cert in CompTIA's AI expansion series.
+
+- id: isaca-aaia
+  name: ISACA Advanced in AI Audit (AAIA)
+  org: ISACA
+  category: governance
+  focus: Auditing AI systems and using AI-driven tools in audit work across AI governance and risk, AI operations, and AI auditing tools and techniques.
+  format: Computer-based proctored exam, 90 questions across 3 domains
+  level: Advanced
+  cost_usd: 599
+  prerequisites: Active CISA, or CIA / CPA / ACCA / FCCA with IT audit focus
+  url: https://www.isaca.org/credentialing/aaia
+  status: available
+  launched: 2025-05
+  last_verified: "2026-07-08"
+  notes: Member $459 / non-member $599; $50 application fee; 6-month exam eligibility window.
+
+- id: isaca-aair
+  name: ISACA Advanced in AI Risk (AAIR)
+  org: ISACA
+  category: governance
+  focus: Managing AI-related risk across the risk lifecycle — evaluating AI vulnerabilities, opportunities, and impacts for experienced IT risk professionals.
+  format: Computer-based proctored exam, 90 questions across 3 domains
+  level: Advanced
+  cost_usd: 599
+  prerequisites: One of ~25 prerequisite designations (CISA, CISM, CRISC, CGEIT, CDPSE, CISSP, etc.) plus IT risk experience
+  url: https://www.isaca.org/credentialing/aair
+  status: available
+  launched: 2026
+  last_verified: "2026-07-08"
+  notes: Launched Q2 2026; member $459 / non-member $599; $50 application fee.
+
+- id: isaca-aaism
+  name: ISACA Advanced in AI Security Management (AAISM)
+  org: ISACA
+  category: governance
+  focus: AI-centric security management — governance of AI systems, AI risk management, and AI technologies/data management controls for security leaders.
+  format: Computer-based proctored exam, 90 questions across 3 domains
+  level: Advanced
+  cost_usd: 599
+  prerequisites: Active CISM or CISSP, plus AI systems experience
+  url: https://www.isaca.org/credentialing/aaism
+  status: available
+  launched: 2025
+  last_verified: "2026-07-08"
+  notes: Billed as the first AI-centric security management certification; member $459 / non-member $599.
+
+- id: iapp-aigp
+  name: IAPP Artificial Intelligence Governance Professional (AIGP)
+  org: IAPP
+  category: governance
+  focus: Responsible AI governance — developing, integrating, and deploying trustworthy AI systems in line with emerging laws and policies.
+  format: Proctored MCQ exam, 100 questions, 3 hours
+  level: Intermediate
+  cost_usd: 799
+  prerequisites: null
+  url: https://iapp.org/certify/aigp
+  status: available
+  launched: 2024
+  last_verified: "2026-07-08"
+  notes: Exam $799; optional training $995-$1,195; maintenance 20 CPE hours + $250 per 2-year term.
+
+- id: pecb-iso-42001-lead-auditor
+  name: PECB Certified ISO/IEC 42001 Lead Auditor
+  org: PECB
+  category: management-systems
+  focus: Auditing AI management systems (AIMS) against ISO/IEC 42001 and leading audit teams per ISO/IEC 17021-1 and ISO 19011.
+  format: 5-day training course + essay-style PECB exam
+  level: Advanced
+  cost_usd: null
+  prerequisites: Fundamental understanding of ISO/IEC 42001 and AI concepts; auditing background recommended
+  url: https://pecb.com/en/education-and-certification-for-individuals/iso-iec-42001/iso-iec-42001-lead-auditor
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: 31 CPD credits; free retake within 12 months; pricing set by training partners (~$799 self-study bundles); certification requires post-exam application with audit experience.
+
+- id: giac-gaips
+  name: GIAC AI Platform Security (GAIPS)
+  org: GIAC (SANS Institute)
+  category: defensive
+  focus: Auditing and securing generative AI applications and LLM development pipelines.
+  format: CyberLive hands-on performance-based proctored exam
+  level: Advanced
+  cost_usd: null
+  prerequisites: None formal; aligned to SANS SEC545 (GenAI and LLM Application Security)
+  url: https://www.giac.org/certifications/ai-security-platform-security-gaips
+  status: announced
+  launched: 2026-07
+  last_verified: "2026-07-08"
+  notes: Currently purchasable only bundled with SEC545; general purchase opens July 28, 2026. One of three GIAC AI certs.
+
+- id: giac-goaa
+  name: GIAC Offensive AI Analyst (GOAA)
+  org: GIAC (SANS Institute)
+  category: offensive
+  focus: Applying offensive AI attack tools and techniques (red-team use of AI) to modern security challenges.
+  format: Proctored CyberLive exam, 56 questions, 2 hours, 67% passing
+  level: Advanced
+  cost_usd: null
+  prerequisites: None formal; aligned to SANS SEC535 (Offensive AI - Attack Tools and Techniques)
+  url: https://www.giac.org/certifications/offensive-ai-analyst-goaa/
+  status: available
+  launched: 2025
+  last_verified: "2026-07-08"
+  notes: 120-day exam window; ProctorU remote or PearsonVUE onsite.
+
+- id: giac-gasae
+  name: GIAC AI Security Automation Engineer (GASAE)
+  org: GIAC (SANS Institute)
+  category: defensive
+  focus: Applying AI and automation across offensive, defensive, and cloud security operations, including SOAR-driven incident response.
+  format: Proctored CyberLive exam, 82 questions, 3 hours, 70% passing
+  level: Advanced
+  cost_usd: null
+  prerequisites: None formal; aligned to SANS SEC598 (Automate Security with Generative AI)
+  url: https://www.giac.org/certifications/ai-security-automation-engineer-gasae/
+  status: available
+  launched: 2025
+  last_verified: "2026-07-08"
+  notes: 120-day exam window; remote or onsite proctoring.
+
+- id: csa-taise
+  name: CSA Trusted AI Safety Expert (TAISE) Certificate
+  org: Cloud Security Alliance (with Northeastern University)
+  category: governance
+  focus: AI safety, governance, risk, privacy, and security across the AI lifecycle using CSA AICM, NIST AI RMF, ISO, and MITRE ATLAS frameworks.
+  format: 10-module course + exam of 60 MCQ, 120 minutes, 80% passing, 2 attempts included
+  level: Intermediate
+  cost_usd: 795
+  prerequisites: null
+  url: https://cloudsecurityalliance.org/education/taise/
+  status: available
+  launched: 2025-10
+  last_verified: "2026-07-08"
+  notes: $795 training + exam bundle; badge co-issued with Northeastern University; certificate program rather than experience-gated certification.
+
+- id: eccouncil-coasp
+  name: EC-Council Certified Offensive AI Security Professional (C|OASP)
+  org: EC-Council
+  category: offensive
+  focus: AI red teaming and offensive AI security — prompt injection, LLM exploitation, adversarial ML, data poisoning, agentic AI attacks, MITRE ATLAS methodology.
+  format: Proctored exam, in-person or online
+  level: Advanced
+  cost_usd: null
+  prerequisites: null
+  url: https://www.eccouncil.org/ai-courses/certified-offensive-ai-security-professional-coasp/
+  status: available
+  launched: 2026-03
+  last_verified: "2026-07-08"
+  notes: Launched 2026-03-15 as part of EC-Council's four-cert Enterprise AI Credential Suite; 10 modules incl. AI incident response and forensics.
+
+- id: eccouncil-crage
+  name: EC-Council Certified Responsible AI Governance & Ethics (C|RAGE)
+  org: EC-Council
+  category: governance
+  focus: AI governance, ethics, risk assessment, and compliance aligned with NIST AI RMF and ISO/IEC 42001.
+  format: Proctored exam (details not yet published)
+  level: Intermediate
+  cost_usd: null
+  prerequisites: null
+  url: https://www.eccouncil.org/ai-courses/certified-responsible-ai-governance-ethics-crage/
+  status: available
+  launched: 2026
+  last_verified: "2026-07-08"
+  notes: 11-module curriculum; part of Feb 2026 Enterprise AI Credential Suite.
+
+- id: eccouncil-caipm
+  name: EC-Council Certified AI Program Manager (C|AIPM)
+  org: EC-Council
+  category: management-systems
+  focus: AI implementation, program management, and business-AI strategy alignment across the AI lifecycle.
+  format: Proctored exam (details not yet published)
+  level: Intermediate
+  cost_usd: null
+  prerequisites: null
+  url: https://www.eccouncil.org/ai-courses/
+  status: available
+  launched: 2026
+  last_verified: "2026-07-08"
+  notes: Part of EC-Council Enterprise AI Credential Suite (ADG Framework - Adopt/Defend/Govern).
+
+- id: eccouncil-aie
+  name: EC-Council Artificial Intelligence Essentials (AI|E)
+  org: EC-Council
+  category: defensive
+  focus: Foundational AI literacy and responsible, secure AI usage skills for enterprise teams.
+  format: Proctored exam (details not yet published)
+  level: Entry
+  cost_usd: null
+  prerequisites: null
+  url: https://www.eccouncil.org/ai-courses/
+  status: available
+  launched: 2026
+  last_verified: "2026-07-08"
+  notes: Entry point of the four-cert Enterprise AI Credential Suite (Feb 2026).
+
+- id: isc2-building-ai-strategy-certificate
+  name: ISC2 Building AI Strategy Certificate
+  org: ISC2
+  category: governance
+  focus: Responsible, ethical, and secure organizational AI adoption for cybersecurity professionals across six assessed courses.
+  format: Six on-demand courses (~16 hours), each with a required assessment; Credly badge on completion
+  level: Entry
+  cost_usd: null
+  prerequisites: null
+  url: https://www.isc2.org/professional-development/certificates/build-ai-strategy
+  status: available
+  launched: 2025-07
+  last_verified: "2026-07-08"
+  notes: Certificate program (assessed, badge-issuing), not a full certification; 16 CPE credits; ISC2 ships no standalone AI certification as of check.
+
+- id: securiti-ai-security-governance-certification
+  name: Securiti AI Security & Governance Certification
+  org: Securiti Education
+  category: governance
+  focus: Generative AI core concepts, global AI laws, compliance obligations, and AI risk management with a final certification exam.
+  format: Online self-paced, 8 modules + 8 quizzes + final certification exam (~2-2.5 hours)
+  level: Entry
+  cost_usd: 0
+  prerequisites: null
+  url: https://education.securiti.ai/certifications/ai-governance/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Free; grants 1.5 IAPP CPE credits; lightweight vendor-education credential.
+
+- id: aws-certified-ai-practitioner
+  name: AWS Certified AI Practitioner (AIF-C01)
+  org: Amazon Web Services
+  category: vendor-ai
+  focus: Foundational AI, ML, and generative AI concepts and use cases on AWS, including responsible AI.
+  format: 65 questions, 90 minutes, Pearson VUE or online proctored
+  level: Entry
+  cost_usd: 100
+  prerequisites: null
+  url: https://aws.amazon.com/certification/certified-ai-practitioner/
+  status: available
+  launched: 2024
+  last_verified: "2026-07-08"
+  notes: Foundational tier; valid 3 years; includes responsible AI / security guardrails domain.
+
+- id: aws-ml-engineer-associate
+  name: AWS Certified Machine Learning Engineer - Associate (MLA-C01)
+  org: Amazon Web Services
+  category: vendor-ai
+  focus: Building, deploying, operationalizing, and securing ML workloads on AWS (SageMaker-centric MLOps).
+  format: 65 questions, 130 minutes, proctored
+  level: Intermediate
+  cost_usd: 150
+  prerequisites: Recommended 1 year hands-on with SageMaker and AWS ML services
+  url: https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/
+  status: available
+  launched: 2024
+  last_verified: "2026-07-08"
+  notes: Includes ML solution monitoring/maintenance and security domain; valid 3 years.
+
+- id: azure-ai-fundamentals-ai-901
+  name: Microsoft Certified Azure AI Fundamentals (Exam AI-901)
+  org: Microsoft
+  category: vendor-ai
+  focus: Foundational AI workloads and considerations, ML principles, computer vision, NLP, and generative AI on Azure / Microsoft Foundry.
+  format: Proctored multiple-choice exam (AI-901)
+  level: Entry
+  cost_usd: 99
+  prerequisites: null
+  url: https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Exam refreshed from AI-900 to AI-901 (April 2026); AI-900 retires 2026-06-30; price varies by region.
+
+- id: azure-ai-apps-and-agents-developer-associate
+  name: Microsoft Certified Azure AI Apps and Agents Developer Associate (Exam AI-103)
+  org: Microsoft
+  category: vendor-ai
+  focus: Designing, building, securing, and deploying generative AI and agentic applications with Python and Microsoft Foundry.
+  format: Proctored exam, 120 minutes, may include interactive components
+  level: Intermediate
+  cost_usd: null
+  prerequisites: Experience developing apps with Python and Azure AI services
+  url: https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-103/
+  status: available
+  launched: 2026-04
+  last_verified: "2026-07-08"
+  notes: Successor to AI-102 Azure AI Engineer Associate (retiring 2026-06-30); includes securing Azure AI solutions.
+
+- id: gcp-professional-machine-learning-engineer
+  name: Google Cloud Professional Machine Learning Engineer
+  org: Google Cloud
+  category: vendor-ai
+  focus: Architecting, scaling, automating, and monitoring ML/AI solutions on Google Cloud, including responsible AI and model governance.
+  format: 50-60 questions, 2 hours, online or onsite proctored
+  level: Advanced
+  cost_usd: 200
+  prerequisites: Recommended 3+ years industry experience incl. 1+ year on Google Cloud
+  url: https://cloud.google.com/learn/certification/machine-learning-engineer
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Recently updated for Gemini Enterprise Agent Platform; covers responsible AI and data/model governance.
+
+- id: gcp-generative-ai-leader
+  name: Google Cloud Generative AI Leader
+  org: Google Cloud
+  category: vendor-ai
+  focus: Business-level generative AI fundamentals, Google Cloud gen AI offerings, and responsible adoption strategy.
+  format: 50-60 multiple choice questions, 90 minutes, proctored
+  level: Entry
+  cost_usd: 99
+  prerequisites: null
+  url: https://cloud.google.com/learn/certification/generative-ai-leader
+  status: available
+  launched: 2025
+  last_verified: "2026-07-08"
+  notes: Non-technical audience; valid 3 years.
+
+- id: oci-ai-foundations-associate
+  name: Oracle Cloud Infrastructure Certified AI Foundations Associate (1Z0-1122-26)
+  org: Oracle
+  category: vendor-ai
+  focus: Foundational AI/ML concepts and Oracle Cloud Infrastructure AI/ML services.
+  format: 30 questions, 60 minutes, online
+  level: Entry
+  cost_usd: 0
+  prerequisites: null
+  url: https://learn.oracle.com/ols/learning-path/become-an-oci-ai-foundations-associate-2025/118071/147781
+  status: available
+  launched: 2023
+  last_verified: "2026-07-08"
+  notes: Exam and course free; 2026 edition exam code 1Z0-1122-26.
+
+- id: oci-generative-ai-professional
+  name: Oracle Cloud Infrastructure Certified Generative AI Professional (1Z0-1127)
+  org: Oracle
+  category: vendor-ai
+  focus: OCI Generative AI Service, LLMs, prompt engineering, fine-tuning, RAG pipelines, and GenAI agents.
+  format: Proctored exam (details on Oracle MyLearn)
+  level: Intermediate
+  cost_usd: null
+  prerequisites: null
+  url: https://learn.oracle.com/ols/learning-path/become-an-oci-generative-ai-professional-2025/118071/147863
+  status: available
+  launched: 2024
+  last_verified: "2026-07-08"
+  notes: 2026 exam code reported as 1Z0-1127-26 (secondary sources).
+
+- id: nvidia-nca-aiio
+  name: NVIDIA-Certified Associate - AI Infrastructure and Operations (NCA-AIIO)
+  org: NVIDIA
+  category: vendor-ai
+  focus: Foundational concepts in deploying and operating NVIDIA AI infrastructure.
+  format: 1-hour proctored exam
+  level: Entry
+  cost_usd: 125
+  prerequisites: null
+  url: https://www.nvidia.com/en-us/learn/certification/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Valid 2 years; professional-tier siblings NCP-AII ($400), NCP-AIO ($500), NCP-AIN ($400).
+
+- id: nvidia-nca-genl
+  name: NVIDIA-Certified Associate - Generative AI LLMs (NCA-GENL)
+  org: NVIDIA
+  category: vendor-ai
+  focus: Foundational generative AI and large language model concepts on NVIDIA platforms.
+  format: 1-hour proctored exam
+  level: Entry
+  cost_usd: 125
+  prerequisites: null
+  url: https://www.nvidia.com/en-us/learn/certification/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Professional tier NCP-GENL ($200) also available; multimodal variant NCA-GENM.
+
+- id: nvidia-ncp-aai
+  name: NVIDIA-Certified Professional - Agentic AI (NCP-AAI)
+  org: NVIDIA
+  category: vendor-ai
+  focus: Professional-level design and deployment of agentic AI systems on NVIDIA platforms.
+  format: 2-hour proctored exam
+  level: Advanced
+  cost_usd: 200
+  prerequisites: null
+  url: https://www.nvidia.com/en-us/learn/certification/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Current-generation agentic AI credential; valid 2 years.
+
+- id: lf-pytorch-certified-associate
+  name: PyTorch Certified Associate (PTCA)
+  org: Linux Foundation (PyTorch Foundation)
+  category: vendor-ai
+  focus: Foundational PyTorch and AI model development skills for engineering and research roles.
+  format: Online proctored multiple-choice exam, 120 minutes
+  level: Entry
+  cost_usd: 250
+  prerequisites: null
+  url: https://training.linuxfoundation.org/certification/pytorch-certified-associate-ptca/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: Only AI/ML person-certification in LF catalog as of check; valid 2 years, one retake included.
+
+- id: databricks-generative-ai-engineer-associate
+  name: Databricks Certified Generative AI Engineer Associate
+  org: Databricks
+  category: vendor-ai
+  focus: Designing, building, deploying, and governing LLM-enabled solutions on Databricks (Mosaic AI, MLflow, Unity Catalog).
+  format: 45 scored multiple-choice questions, 90 minutes, proctored
+  level: Intermediate
+  cost_usd: 200
+  prerequisites: Recommended 6+ months hands-on generative AI solution experience
+  url: https://www.databricks.com/learn/certification/genai-engineer-associate
+  status: available
+  launched: 2024
+  last_verified: "2026-07-08"
+  notes: Governance domain is 8% of exam (Unity Catalog); 2-year validity.
+
+- id: snowflake-snowpro-specialty-gen-ai
+  name: SnowPro Specialty - Gen AI (GES-C01)
+  org: Snowflake
+  category: vendor-ai
+  focus: Generative AI on Snowflake (Cortex functions, agents, search, Document AI) with a substantial Gen AI governance domain.
+  format: Proctored exam, 115 minutes, passing score 750/1000
+  level: Advanced
+  cost_usd: 375
+  prerequisites: SnowPro Core or SnowPro Associate Platform certification; 1+ year Gen AI experience with Snowflake
+  url: https://learn.snowflake.com/en/certifications/snowpro-GenAI/
+  status: available
+  launched: null
+  last_verified: "2026-07-08"
+  notes: $375 per attempt; GES-C01 being retired in favor of GES-C02; governance domain ~22% per secondary sources; valid 2 years.

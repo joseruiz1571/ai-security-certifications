@@ -1,0 +1,10 @@
+{
+  "name": "ai-security-certifications",
+  "version": "1.0.0",
+  "description": "Living registry of AI security, governance, and vendor AI certifications",
+  "type": "module",
+  "scripts": {
+    "generate": "bun scripts/generate.ts",
+    "refresh": "bun scripts/refresh.ts"
+  }
+}
