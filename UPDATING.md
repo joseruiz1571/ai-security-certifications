@@ -1,6 +1,6 @@
 # Update Workflow
 
-This registry self-updates monthly. This file IS the prompt the automated agent executes; a human can follow it identically.
+This registry is refreshed by hand, not on a schedule. This file IS the protocol: the maintainer follows it directly, and it is also the prompt `scripts/refresh.ts` feeds to a headless agent when that script is run manually.
 
 ## Steps
 
@@ -24,10 +24,14 @@ This registry self-updates monthly. This file IS the prompt the automated agent 
 
 ## Automation
 
-`scripts/refresh.ts` wraps this workflow in a headless Claude run and commits the result. Cron line (installed in the user crontab, monthly on the 3rd at 09:17):
+There is no automation running today. No cron entry is installed and the repo has no CI workflow, so nothing invokes a refresh on its own — checked 2026-09-25.
+
+`scripts/refresh.ts` exists as a manual wrapper: it runs this file as the prompt to a headless Claude session, then regenerates the README. Be aware before running it that it ends with an unconditional `git add -A`, `git commit` and `git push` on whatever branch is checked out.
+
+To put it on a schedule, add a cron line such as this one (monthly on the 3rd at 09:17), adjusting the path to your checkout:
 
 ```
 17 9 3 * * cd ~/Code/github/joseruiz1571/ai-security-certifications && ~/.bun/bin/bun scripts/refresh.ts >> refresh.log 2>&1
 ```
 
-Remove the automation anytime with `crontab -e` (delete that line).
+Remove it again with `crontab -e`. Until that line is actually installed, do not describe the registry as automatically maintained.
