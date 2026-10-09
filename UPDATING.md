@@ -1,37 +1,47 @@
-# Update Workflow
+# Update workflow
 
-This registry is refreshed by hand, not on a schedule. This file IS the protocol: the maintainer follows it directly, and it is also the prompt `scripts/refresh.ts` feeds to a headless agent when that script is run manually.
+The registry's facts are refreshed manually. No fact-refresh schedule is installed by this repository. Generated-file and data checks are local validation, not live source verification.
 
-## Steps
+## Research and edit
 
-1. Read `data/certifications.yaml`.
-2. For every entry, re-verify against its official page (web search + fetch the `url`):
-   - Confirm the cert still exists under that name. If renamed, update `name` and add a `notes` entry.
-   - Update `cost_usd`, `format`, `status` if changed.
-   - If the `url` is dead, find the new official URL — only record a URL you actually fetched.
-   - Set `last_verified` to today's date for every entry you checked.
-3. Sweep for NEW certifications not yet in the file. Search: "AI security certification", "AI red teaming certification", "AI governance certification", "new AI security cert <current year>". Check known issuers: CompTIA, ISACA, IAPP, GIAC/SANS, CSA, OffSec, HTB, TCM Security, SecOps Group, Practical DevSecOps, Learn Prompting, TryHackMe, EC-Council, ISC2, PECB, AWS, Azure, GCP, OCI, NVIDIA, Linux Foundation.
-4. Add new finds to `data/certifications.yaml` using the existing schema (id, name, org, category, focus, format, level, cost_usd, prerequisites, url, status, launched, last_verified, notes). Categories: `offensive`, `defensive`, `governance`, `management-systems`, `vendor-ai`.
-5. Run `bun run generate` and confirm it exits 0.
-6. Commit: `git add -A && git commit -m "refresh: <summary of changes>"`.
+1. Read [docs/SCOPE.md](docs/SCOPE.md), the current YAML, and the relevant profiles in CATALOG.md. Use **Bun/TypeScript**; no external package dependencies are required. Bun 1.4.2 was used for the October 2026 refresh.
+2. Fetch the issuer's programme and assessment pages. Verify the exact name, distinct certification assessment, current exam availability, and prerequisite conditions. Classify securing AI separately from using AI in cybersecurity. Do not infer a practical exam from hands-on training.
+3. Fetch the exam store, registration, or authorized partner page. Verify the **initial attempt**, currency, required bundle or subscription, membership restrictions, additional application fees, retakes, and recurring charges where published. Never use a retake price as the initial exam price. Preserve explicit unknowns and conflicting product information.
+4. Edit `data/certifications.yaml`. Keep stable, issuer-specific IDs and all required fields. Replace the old `cost_usd` model with the structured `pricing` object described below. Add labeled `sources`, and use `last_verified` only for a substantive check actually performed. Regenerating Markdown is not verification. If part of a record remains unverified or uses older evidence, say so in its notes.
+5. Sweep for omissions across AI security, agentic security, AI/ML red teaming, AI governance, and provider exam stores. Add a programme only when the evidence meets the scope policy. Place announcement-only entries in `upcoming`, uncertain assessment/availability in `unverified`, and certificate programmes in `excluded`. Retain retired and excluded records with reasons; do not inflate current-certification counts.
+6. Review [docs/CHOOSING.md](docs/CHOOSING.md) when an exam's availability, coverage, or prerequisites materially change its recommendation. The guide is editorial prose; prices and detailed credential facts remain in the YAML and generated catalogue.
 
-## Hard rules
+## Record schema
 
-- Never record a URL you did not fetch live during this run.
-- Never hand-edit `README.md` — it is generated.
-- bun only; never npm/npx; never Python.
-- Retired/discontinued certs are not deleted — set `status: retired` and keep the entry.
+Required fields are `id`, `name`, `org`, `category`, `security_focus`, `assessment_type`, `focus`, `format`, `level`, `prerequisites`, `url`, `status`, `launched`, `last_verified`, `notes`, `pricing`, and `sources`. Nullable fields are explicit, not omitted.
 
-## Automation
+- Categories: `offensive`, `defensive`, `ai-for-security`, `governance`, `management-systems`, `vendor-ai`.
+- Security focus: `primary`, `mixed`, `minor`, `none`.
+- Assessment: `practical`, `mixed`, `knowledge`, `unconfirmed`, `course-assessment`. An unconfirmed format does not itself disprove a distinct certification scheme; explain exactly what is unknown.
+- Status: `available`, `beta`, `upcoming`, `unverified`, `retired`, `excluded`.
+- Level: `Entry`, `Intermediate`, `Advanced`, `Unspecified`. These are audience descriptions, not cross-issuer difficulty scores.
+- `prerequisites` and `launched`: text or `null`. Differentiate required eligibility from recommended preparation.
+- `last_verified`: a quoted `YYYY-MM-DD` date, never a future date.
+- `notes`: an array of strings. The first note for an excluded entry must explain its exclusion.
+- `pricing`: `{ amount, currency, basis, details, purchase_url }`. Use `null` for unknown numeric price, currency, or purchase link. A numeric price requires an evidenced currency. Basis is `exam`, `bundle`, `subscription`, `quote`, or `unknown`.
+- `sources`: one or more `{ url, label }` objects linking the supporting evidence. Keep purchase/registration links separate from descriptive sources when helpful.
 
-There is no automation running today. No cron entry is installed and the repo has no CI workflow, so nothing invokes a refresh on its own — checked 2026-09-25.
+## Validate and review
 
-`scripts/refresh.ts` exists as a manual wrapper: it runs this file as the prompt to a headless Claude session, then regenerates the README. Be aware before running it that it ends with an unconditional `git add -A`, `git commit` and `git push` on whatever branch is checked out.
-
-To put it on a schedule, add a cron line such as this one (monthly on the 3rd at 09:17), adjusting the path to your checkout:
-
+```sh
+bun run generate
+bun run check
+git diff --check
+git diff --stat
+git diff
 ```
-17 9 3 * * cd ~/Code/github/joseruiz1571/ai-security-certifications && ~/.bun/bin/bun scripts/refresh.ts >> refresh.log 2>&1
-```
 
-Remove it again with `crontab -e`. Until that line is actually installed, do not describe the registry as automatically maintained.
+`generate` validates the source and writes README.md plus CATALOG.md. `check` verifies that generated files are current and runs focused regression tests. Output is deterministic; a build does not insert today's date into unchanged records. Review classification, currency, checkout identity, every newly added URL, exclusions, and recommendation changes before publishing.
+
+Commit the intended files on a branch and use the repository's normal review/merge process. A maintenance script should not stage unrelated work or publish after a failed research or validation step.
+
+## Optional manual research helper
+
+`bun run refresh` runs UPDATING.md through an installed, authenticated Claude CLI using the maintainer's subscription login. The helper removes API-key environment variables from its child process, preserves other session restrictions, logs to ignored `refresh.log`, and stops if research or validation fails.
+
+It **does not commit, push, merge, or install a schedule**. It can leave partial local edits when research fails; inspect the log and diff. The helper is optional: the same workflow can be followed manually without Claude. Do not claim a schedule or automatic maintenance exists unless one has separately been installed and verified.
