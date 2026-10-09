@@ -1,10 +1,12 @@
 {
   "name": "ai-security-certifications",
-  "version": "1.0.0",
-  "description": "Living registry of AI security, governance, and vendor AI certifications",
+  "version": "2.0.0",
+  "description": "Sourced registry of exam-based AI security certifications, pricing, and adjacent qualifications",
   "type": "module",
   "scripts": {
     "generate": "bun scripts/generate.ts",
+    "test": "bun test",
+    "check": "bun scripts/generate.ts --check && bun test",
     "refresh": "bun scripts/refresh.ts"
   }
 }

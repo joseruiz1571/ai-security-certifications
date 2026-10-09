@@ -1,559 +1,2858 @@
 # AI Security Certifications — source of truth
-# Edit this file, then run `bun run generate`. Never hand-edit README.md.
-# Categories: offensive | defensive | governance | management-systems | vendor-ai
-# Rule: every url must have been fetched live before entry. last_verified = date of that fetch.
+# Edit this YAML, then run `bun run generate` and `bun run check`.
+# README.md and CATALOG.md are generated. Scope: docs/SCOPE.md.
+# Dates mean source checks, not render dates; unknown prices stay null.
 
-- id: tryhackme-ai1
-  name: TryHackMe AI Security Certification (AI1)
-  org: TryHackMe
-  category: offensive
-  focus: Hands-on attack and defense of real AI systems across threat modeling, prompt injection and jailbreaking, AI supply chain security, and RAG data poisoning.
-  format: 48-hour non-proctored browser-based practical exam; 4 sections, 13 hands-on scenarios; 70% to pass
-  level: Entry
-  cost_usd: null
-  prerequisites: Basic security background (networking, OS, core security concepts); no prior AI/ML experience needed
-  url: https://help.tryhackme.com/en/articles/15301082-ai1-exam-guide
-  status: available
-  launched: 2026-05
-  last_verified: "2026-09-25"
-  notes: Cert valid 3 years; prep is the AI Security learning path (5 modules, 25 rooms, included with Premium). Official cert page rate-limited during verification, so help-center exam guide cited.
-
-- id: secops-c-ai-mlpen
-  name: Certified AI/ML Pentester (C-AI/MLPen)
-  org: The SecOps Group
-  category: offensive
-  focus: Practical LLM/AI exploitation including direct and indirect prompt injection, RAG poisoning, training data manipulation, and LLM design vulnerabilities.
-  format: 4-hour hands-on practical exam (flag-based, VPN lab, on-demand, unproctored); 60% pass, 75% merit
-  level: Intermediate
-  cost_usd: 330
-  prerequisites: ~1 year professional pentesting experience recommended; OWASP Top 10 for LLMs familiarity
-  url: https://pentestingexams.com/certifications/professional/certified-ai-ml-pentester/
-  status: available
-  launched: 2024
-  last_verified: "2026-09-25"
-  notes: List price $330 at this verification, discounted to $83 with a promo code shown on the page; the $34 anniversary price recorded in July 2026 is gone. Includes 1 free retake; exam-only model with no official training.
-
-- id: offsec-osai
-  name: OffSec AI Red Teamer (OSAI / OSAI+), course AI-300 Advanced AI Red Teaming
-  org: OffSec (Offensive Security)
-  category: offensive
-  focus: Assessing and exploiting modern AI systems — generative AI, LLMs, ML pipelines, and multi-agent environments — from an attacker's perspective.
-  format: 24-hour proctored hands-on red team engagement against a realistic AI-enabled enterprise environment; course + cert bundle
-  level: Advanced
-  cost_usd: 1749
-  prerequisites: Strong cybersecurity foundation; pentesting experience; OSCP or equivalent recommended
-  url: https://www.offsec.com/courses/ai-300/
-  status: available
-  launched: 2026-06
-  last_verified: "2026-09-25"
-  notes: Passing awards OSAI (never expires); OSAI+ tier expires after 3 years and requires renewal. $1,749 bundle = 90 days course access + 1 exam attempt.
-
-- id: tcm-papa
-  name: Practical AI Pentest Associate (PAPA)
-  org: TCM Security
-  category: offensive
-  focus: Full penetration test of an agentic AI application, assessed via exploitation plus a professional pentest report.
-  format: Hands-on practical exam — 2 full days of testing plus 2 days for report writing; no flags, no multiple choice; non-proctored
-  level: Entry
-  cost_usd: 249
-  prerequisites: Beginner IT knowledge; basic pentesting familiarity recommended
-  url: https://certifications.tcm-sec.com/papa/
-  status: available
-  launched: 2025-12
-  last_verified: "2026-09-25"
-  notes: $249 at this verification; the $199 sale price recorded in July 2026 has ended. Voucher includes 12-month access to AI 100 and AI Hacking 101 courses plus one free retake; cert does not expire.
-
-- id: learn-prompting-airtp-plus
-  name: AI Red Teaming Professional Certification (AIRTP+)
-  org: Learn Prompting
-  category: offensive
-  focus: Advanced techniques for attacking and securing LLMs — prompt injection, jailbreaking, AI red teaming, and defense strategies.
-  format: Proctored professional exam on scheduled dates; optional 6-week masterclass + exam bundle
-  level: Advanced
-  cost_usd: 299
-  prerequisites: Aimed at experienced cybersecurity/AI safety professionals; no coding required
-  url: https://learnprompting.org/certificates/ai-red-teaming-professional-certification
-  status: available
-  launched: 2025-01
-  last_verified: "2026-09-25"
-  notes: $299 exam-only (1 attempt) or $1,199 course + exam bundle (2 attempts). Cert valid only 1 year with CE renewal. Associate-level sibling AIRTA+ also exists.
-
-- id: htb-coae
-  name: HTB Certified Offensive AI Expert (HTB COAE)
-  org: Hack The Box
-  category: offensive
-  focus: Offensive AI expertise across adversarial ML, data poisoning, evasion attacks, prompt injection, LLM output exploitation, and AI privacy attacks.
-  format: 7-day hands-on practical exam requiring a commercial-grade technical report; capstone of the AI Red Teamer Job Role Path
-  level: Advanced
-  cost_usd: null
-  prerequisites: Completion of the HTB Academy AI Red Teamer Job Role Path
-  url: https://academy.hackthebox.com/news/the-new-htb-certified-offensive-ai-expert-htb-coae-is-officially-here
-  status: available
-  launched: 2026-04
-  last_verified: "2026-09-25"
-  notes: Launched April 2, 2026; developed in collaboration with Google and aligned with Google's SAIF. Reported ~$210 including 2 attempts (not confirmed on fetched page).
-
-- id: pdso-caisp
-  name: Certified AI Security Professional (CAISP)
-  org: Practical DevSecOps (HYSN Technologies)
-  category: offensive
-  focus: Hands-on AI security including LLM attacks (prompt injection, model poisoning, adversarial attacks), AI threat modeling with STRIDE/MITRE ATLAS, and AI supply chain security.
-  format: 6-hour task-oriented practical lab exam (5 challenges) plus 24 hours to submit a report
-  level: Intermediate
-  cost_usd: 1099
-  prerequisites: Basic Linux command-line knowledge; scripting helpful but not mandatory
-  url: https://www.practical-devsecops.com/certified-ai-security-professional/
-  status: available
+- id: "8ksec-caaisr"
+  name: "Certified Advanced AI Security Researcher (CAAISR)"
+  org: "8kSec"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Advanced AI attacks and defenses, model formats, backdoors, agent and MCP exploitation, and AI-assisted security tooling."
+  format: "Twenty-four-hour practical lab exam followed by 24 hours for a security research report."
+  level: "Advanced"
+  prerequisites: "Completion of the accompanying Advanced AI Security training is currently mandatory. CAISR-level knowledge or equivalent experience, Python, Git, Docker and command-line competence are expected; holding CAISR itself is not mandatory."
+  url: "https://www.8ksec.io/caaisr/"
+  status: "available"
   launched: null
-  last_verified: "2026-09-25"
-  notes: $1,099 at verification (list $1,199) including course — 3 years video access, 60 days browser labs, 36 CPEs. Lifetime credential. Listed in CISA NICCS catalog.
+  last_verified: "2026-10-09"
+  notes:
+    - "Includes some use of AI for web/mobile security testing, alongside a substantial central focus on securing AI systems."
+    - "A separate assessment is required after the training."
+  pricing:
+    amount: null
+    currency: null
+    basis: "quote"
+    details: "Training and certification are offered through live sessions or a provider quotation; no reliable public standalone exam fee was verified."
+    purchase_url: "https://www.8ksec.io/contact-us/"
+  sources:
+    - url: "https://www.8ksec.io/caaisr/"
+      label: "Certification assessment and prerequisites"
+    - url: "https://www.8ksec.io/advanced-ai-security/"
+      label: "Accompanying training"
+    - url: "https://www.8ksec.io/contact-us/"
+      label: "Provider quotation route"
 
-- id: comptia-secai-plus
-  name: CompTIA SecAI+ (exam CY0-001)
-  org: CompTIA
-  category: defensive
-  focus: Securing AI systems, AI-assisted security operations, and AI governance/risk/compliance for experienced cybersecurity professionals.
-  format: Proctored exam, max 60 MCQ and performance-based questions, 60 minutes, passing 600/900
-  level: Intermediate
-  cost_usd: null
-  prerequisites: Recommended 3-4 years IT with 2+ years hands-on cybersecurity; Security+/CySA+/PenTest+ or equivalent recommended
-  url: https://www.comptia.org/en/certifications/secai/
-  status: available
-  launched: 2026-02
-  last_verified: "2026-09-25"
-  notes: Launched February 17, 2026 after beta; first cert in CompTIA's AI expansion series.
-
-- id: isaca-aaia
-  name: ISACA Advanced in AI Audit (AAIA)
-  org: ISACA
-  category: governance
-  focus: Auditing AI systems and using AI-driven tools in audit work across AI governance and risk, AI operations, and AI auditing tools and techniques.
-  format: Computer-based proctored exam, 90 questions across 3 domains
-  level: Advanced
-  cost_usd: 599
-  prerequisites: Active CISA, or CIA / CPA / ACCA / FCCA with IT audit focus
-  url: https://www.isaca.org/credentialing/aaia
-  status: available
-  launched: 2025-05
-  last_verified: "2026-09-25"
-  notes: Member $459 / non-member $599; $50 application fee; 6-month exam eligibility window.
-
-- id: isaca-aair
-  name: ISACA Advanced in AI Risk (AAIR)
-  org: ISACA
-  category: governance
-  focus: Managing AI-related risk across the risk lifecycle — evaluating AI vulnerabilities, opportunities, and impacts for experienced IT risk professionals.
-  format: Computer-based proctored exam, 90 questions across 3 domains
-  level: Advanced
-  cost_usd: 599
-  prerequisites: One of ~25 prerequisite designations (CISA, CISM, CRISC, CGEIT, CDPSE, CISSP, etc.) plus IT risk experience
-  url: https://www.isaca.org/credentialing/aair
-  status: available
-  launched: 2026
-  last_verified: "2026-09-25"
-  notes: Launched Q2 2026; member $459 / non-member $599; $50 application fee.
-
-- id: isaca-aaism
-  name: ISACA Advanced in AI Security Management (AAISM)
-  org: ISACA
-  category: governance
-  focus: AI-centric security management — governance of AI systems, AI risk management, and AI technologies/data management controls for security leaders.
-  format: Computer-based proctored exam, 90 questions across 3 domains
-  level: Advanced
-  cost_usd: 599
-  prerequisites: Active CISM or CISSP, plus AI systems experience
-  url: https://www.isaca.org/credentialing/aaism
-  status: available
-  launched: 2025
-  last_verified: "2026-09-25"
-  notes: Billed as the first AI-centric security management certification; member $459 / non-member $599.
-
-- id: iapp-aigp
-  name: IAPP Artificial Intelligence Governance Professional (AIGP)
-  org: IAPP
-  category: governance
-  focus: Responsible AI governance — developing, integrating, and deploying trustworthy AI systems in line with emerging laws and policies.
-  format: Proctored MCQ exam, 100 questions, 3 hours
-  level: Intermediate
-  cost_usd: 799
-  prerequisites: null
-  url: https://iapp.org/certify/aigp
-  status: available
-  launched: 2024
-  last_verified: "2026-09-25"
-  notes: Certification confirmed active on the official page (Buy the exam link present), but no pricing, exam length or CPE detail is published there. The $799 exam fee, $995-$1,195 training and 20 CPE / $250 per 2-year maintenance carried from the July 2026 check were not re-confirmed at this verification.
-
-- id: pecb-iso-42001-lead-auditor
-  name: PECB Certified ISO/IEC 42001 Lead Auditor
-  org: PECB
-  category: management-systems
-  focus: Auditing AI management systems (AIMS) against ISO/IEC 42001 and leading audit teams per ISO/IEC 17021-1 and ISO 19011.
-  format: 5-day training course + essay-style PECB exam
-  level: Advanced
-  cost_usd: null
-  prerequisites: Fundamental understanding of ISO/IEC 42001 and AI concepts; auditing background recommended
-  url: https://pecb.com/en/education-and-certification-for-individuals/iso-iec-42001/iso-iec-42001-lead-auditor
-  status: available
+- id: "8ksec-caisr"
+  name: "Certified AI Security Researcher (CAISR)"
+  org: "8kSec"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "LLM, RAG, MCP and agent exploitation, AI infrastructure assessment and security research."
+  format: "Twenty-four-hour practical lab exam followed by 24 hours for a security research report reviewed by the issuer."
+  level: "Advanced"
+  prerequisites: "Completion of the accompanying Practical AI Security training is currently mandatory. Strong pentesting, LLM and Python knowledge are expected."
+  url: "https://www.8ksec.io/caisr/"
+  status: "available"
   launched: null
-  last_verified: "2026-09-25"
-  notes: 31 CPD credits confirmed on the page; certification requires a post-exam application with audit experience. Course length in days and partner pricing (~$799 self-study bundles carried from the July 2026 check) are not published on this page and were not re-confirmed.
+  last_verified: "2026-10-09"
+  notes:
+    - "The practical certification examination is distinct from the course's completion award."
+    - "This issuer's CAISR is different from Red Team Leaders' similarly abbreviated security-and-risk exam."
+  pricing:
+    amount: null
+    currency: null
+    basis: "bundle"
+    details: "Public price was not reliably accessible. The registration route bundles Practical AI Security training with a CAISR attempt; a separate exam-only price was not verified."
+    purchase_url: "https://academy.8ksec.io/course/practical-ai-security"
+  sources:
+    - url: "https://www.8ksec.io/caisr/"
+      label: "Exam, prerequisites and registration route"
+    - url: "https://academy.8ksec.io/course/practical-ai-security"
+      label: "Training-and-certification registration"
 
-- id: giac-gaips
-  name: GIAC AI Platform Security (GAIPS)
-  org: GIAC (SANS Institute)
-  category: defensive
-  focus: Auditing and securing generative AI applications and LLM development pipelines.
-  format: Proctored CyberLive hands-on exam, 54 questions, 2 hours, 65% passing
-  level: Advanced
-  cost_usd: null
-  prerequisites: None formal; aligned to SANS SEC545 (GenAI and LLM Application Security)
-  url: https://www.giac.org/certifications/ai-security-platform-security-gaips
-  status: available
-  launched: 2026-07
-  last_verified: "2026-09-25"
-  notes: General purchase is now open — page shows Register now and the full exam spec; was status "announced" at the July 2026 check. Passing score set at 65% for exam versions released on or after 2026-07-25; 120-day exam window. One of three GIAC AI certs.
-
-- id: giac-goaa
-  name: GIAC Offensive AI Analyst (GOAA)
-  org: GIAC (SANS Institute)
-  category: offensive
-  focus: Applying offensive AI attack tools and techniques (red-team use of AI) to modern security challenges.
-  format: Proctored CyberLive exam, 56 questions, 2 hours, 67% passing
-  level: Advanced
-  cost_usd: null
-  prerequisites: None formal; aligned to SANS SEC535 (Offensive AI - Attack Tools and Techniques)
-  url: https://www.giac.org/certifications/offensive-ai-analyst-goaa/
-  status: available
-  launched: 2025
-  last_verified: "2026-09-25"
-  notes: 120-day exam window; ProctorU remote or PearsonVUE onsite.
-
-- id: giac-gasae
-  name: GIAC AI Security Automation Engineer (GASAE)
-  org: GIAC (SANS Institute)
-  category: defensive
-  focus: Applying AI and automation across offensive, defensive, and cloud security operations, including SOAR-driven incident response.
-  format: Proctored CyberLive exam, 82 questions, 3 hours, 70% passing
-  level: Advanced
-  cost_usd: null
-  prerequisites: None formal; aligned to SANS SEC598 (Automate Security with Generative AI)
-  url: https://www.giac.org/certifications/ai-security-automation-engineer-gasae/
-  status: available
-  launched: 2025
-  last_verified: "2026-09-25"
-  notes: 120-day exam window; remote or onsite proctoring.
-
-- id: csa-taise
-  name: CSA Trusted AI Safety Expert (TAISE) Certificate
-  org: Cloud Security Alliance (with Northeastern University)
-  category: governance
-  focus: AI safety, governance, risk, privacy, and security across the AI lifecycle using CSA AICM, NIST AI RMF, ISO, and MITRE ATLAS frameworks.
-  format: 10-module course + exam of 60 MCQ, 120 minutes, 80% passing, 2 attempts included
-  level: Intermediate
-  cost_usd: 795
-  prerequisites: null
-  url: https://cloudsecurityalliance.org/education/taise/
-  status: available
-  launched: 2025-10
-  last_verified: "2026-09-25"
-  notes: $795 training + exam bundle; badge co-issued with Northeastern University; certificate program rather than experience-gated certification.
-
-- id: eccouncil-coasp
-  name: EC-Council Certified Offensive AI Security Professional (C|OASP)
-  org: EC-Council
-  category: offensive
-  focus: AI red teaming and offensive AI security — prompt injection, LLM exploitation, adversarial ML, data poisoning, agentic AI attacks, MITRE ATLAS methodology.
-  format: Proctored exam, in-person or online
-  level: Advanced
-  cost_usd: null
-  prerequisites: null
-  url: https://www.eccouncil.org/ai-courses/certified-offensive-ai-security-professional-coasp/
-  status: available
-  launched: 2026-03
-  last_verified: "2026-09-25"
-  notes: Launched 2026-03-15 as part of EC-Council's four-cert Enterprise AI Credential Suite; 10 modules incl. AI incident response and forensics.
-
-- id: eccouncil-crage
-  name: EC-Council Certified Responsible AI Governance & Ethics (C|RAGE)
-  org: EC-Council
-  category: governance
-  focus: AI governance, ethics, risk assessment, and compliance aligned with NIST AI RMF and ISO/IEC 42001.
-  format: Proctored exam (details not yet published)
-  level: Intermediate
-  cost_usd: null
-  prerequisites: null
-  url: https://www.eccouncil.org/ai-courses/certified-responsible-ai-governance-ethics-crage/
-  status: available
-  launched: 2026
-  last_verified: "2026-09-25"
-  notes: 11-module curriculum; part of Feb 2026 Enterprise AI Credential Suite.
-
-- id: eccouncil-caipm
-  name: EC-Council Certified AI Program Manager (C|AIPM)
-  org: EC-Council
-  category: management-systems
-  focus: AI implementation, program management, and business-AI strategy alignment across the AI lifecycle.
-  format: Proctored exam (details not yet published)
-  level: Intermediate
-  cost_usd: null
-  prerequisites: null
-  url: https://www.eccouncil.org/ai-courses/
-  status: available
-  launched: 2026
-  last_verified: "2026-09-25"
-  notes: Part of EC-Council Enterprise AI Credential Suite (ADG Framework - Adopt/Defend/Govern).
-
-- id: eccouncil-aie
-  name: EC-Council Artificial Intelligence Essentials (AI|E)
-  org: EC-Council
-  category: defensive
-  focus: Foundational AI literacy and responsible, secure AI usage skills for enterprise teams.
-  format: Proctored exam (details not yet published)
-  level: Entry
-  cost_usd: null
-  prerequisites: null
-  url: https://www.eccouncil.org/ai-courses/
-  status: available
-  launched: 2026
-  last_verified: "2026-09-25"
-  notes: Entry point of the four-cert Enterprise AI Credential Suite (Feb 2026).
-
-- id: isc2-building-ai-strategy-certificate
-  name: ISC2 Building AI Strategy Certificate
-  org: ISC2
-  category: governance
-  focus: Responsible, ethical, and secure organizational AI adoption for cybersecurity professionals across six assessed courses.
-  format: Six on-demand courses (~16 hours), each with a required assessment; Credly badge on completion
-  level: Entry
-  cost_usd: null
-  prerequisites: null
-  url: https://www.isc2.org/professional-development/certificates/build-ai-strategy
-  status: available
-  launched: 2025-07
-  last_verified: "2026-09-25"
-  notes: Certificate program (assessed, badge-issuing), not a full certification; 16 CPE credits; ISC2 ships no standalone AI certification as of check.
-
-- id: securiti-ai-security-governance-certification
-  name: Securiti AI Security & Governance Certification
-  org: Securiti Education
-  category: governance
-  focus: Generative AI core concepts, global AI laws, compliance obligations, and AI risk management with a final certification exam.
-  format: Online self-paced, 8 modules + 8 quizzes + final certification exam (~2-2.5 hours)
-  level: Entry
-  cost_usd: 0
-  prerequisites: null
-  url: https://education.securiti.ai/certifications/ai-governance/
-  status: available
+- id: "altered-security-cairtp"
+  name: "Altered Security Certified AI Red Team Professional (AltSec CAIRTP)"
+  org: "Altered Security"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Red teaming Microsoft AI applications and agents, including Copilot, Foundry, Azure/Entra identities and agent authorization."
+  format: "Advertised hands-on certification exam included with the bootcamp; a separate completion certificate is also offered for training attendance."
+  level: "Intermediate"
+  prerequisites: "Basic Azure and Azure red-team knowledge are required. Prior AI red-teaming experience is desired but not mandatory."
+  url: "https://www.alteredsecurity.com/cairtp-bootcamp"
+  status: "upcoming"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Free; grants 1.5 IAPP CPE credits; lightweight vendor-education credential.
+  last_verified: "2026-10-09"
+  notes:
+    - "The advertised bootcamp begins 2026-11-20; the separately advertised first classroom training is 2026-10-24 to 2026-10-26, both future dates at verification."
+    - "Purchase of future training does not establish that the certification exam can be taken today."
+  pricing:
+    amount: 549
+    currency: "USD"
+    basis: "bundle"
+    details: "Advertised bootcamp package with 30 days of labs and one certification exam attempt; 60-day and 90-day packages cost USD 749 and USD 949. The USD 99 option is a retake for existing students, not initial entry."
+    purchase_url: "https://www.alteredsecurity.com/cairtp-bootcamp"
+  sources:
+    - url: "https://www.alteredsecurity.com/cairtp-bootcamp"
+      label: "Bootcamp, future dates, package prices and exam"
+    - url: "https://www.alteredsecurity.com/altseccon-cairtp-training"
+      label: "Classroom offering and future dates"
 
-- id: aws-certified-ai-practitioner
-  name: AWS Certified AI Practitioner (AIF-C01)
-  org: Amazon Web Services
-  category: vendor-ai
-  focus: Foundational AI, ML, and generative AI concepts and use cases on AWS, including responsible AI.
-  format: 65 questions, 90 minutes, Pearson VUE or online proctored
-  level: Entry
-  cost_usd: 100
+- id: "cwl-ai-rta"
+  name: "AI Red Team Analyst (AI-RTA)"
+  org: "CyberWarFare Labs"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "AI red teaming and exploitation of AI application vulnerabilities."
+  format: "Issuer product material describes a 30-day challenge-lab examination."
+  level: "Unspecified"
   prerequisites: null
-  url: https://aws.amazon.com/certification/certified-ai-practitioner/
-  status: available
-  launched: 2024
-  last_verified: "2026-09-25"
-  notes: Page confirms 90 minutes, 65 questions, cost 100 USD. Foundational tier; valid 3 years; includes responsible AI / security guardrails domain. The AIF-C01 exam code in the name is no longer printed on this page and was not re-confirmed.
-
-- id: aws-ml-engineer-associate
-  name: AWS Certified Machine Learning Engineer - Associate (MLA-C01)
-  org: Amazon Web Services
-  category: vendor-ai
-  focus: Building, deploying, operationalizing, and securing ML workloads on AWS (SageMaker-centric MLOps).
-  format: 65 questions, 130 minutes, proctored
-  level: Intermediate
-  cost_usd: 150
-  prerequisites: Recommended 1 year hands-on with SageMaker and AWS ML services
-  url: https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/
-  status: available
-  launched: 2024
-  last_verified: "2026-09-25"
-  notes: Includes ML solution monitoring/maintenance and security domain; valid 3 years.
-
-- id: azure-ai-fundamentals-ai-901
-  name: Microsoft Certified Azure AI Fundamentals (Exam AI-901)
-  org: Microsoft
-  category: vendor-ai
-  focus: Foundational AI workloads and considerations, ML principles, computer vision, NLP, and generative AI on Azure / Microsoft Foundry.
-  format: Proctored multiple-choice exam (AI-901)
-  level: Entry
-  cost_usd: 99
-  prerequisites: null
-  url: https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/
-  status: available
+  url: "https://cyberwarfare.live/product/ai-red-team-analyst-ai-rta/"
+  status: "unverified"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Exam refreshed from AI-900 to AI-901; the page records an English-language update on 2026-04-15 and now references AI-901 only. AI-900 was scheduled to retire 2026-06-30, a date now past, though the retirement is not restated on this page. Price varies by region and is not shown here.
+  last_verified: "2026-10-09"
+  notes:
+    - "Previously indexed issuer material describes a certification exam, but the current fetched product route provides only a generic site shell."
+    - "Kept as unverified pending confirmation of current exam availability, package contents and price."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Issuer promotions advertised USD 9, while older indexed product material listed USD 29 launch / USD 49 regular. The current product page does not expose a verifiable checkout amount; no price is treated as confirmed."
+    purchase_url: "https://cyberwarfare.live/product/ai-red-team-analyst-ai-rta/"
+  sources:
+    - url: "https://cyberwarfare.live/product/ai-red-team-analyst-ai-rta/"
+      label: "Issuer product route and previously indexed assessment description"
+    - url: "https://cyberwarfare.live/"
+      label: "Issuer promotions and current storefront"
 
-- id: azure-ai-apps-and-agents-developer-associate
-  name: Microsoft Certified Azure AI Apps and Agents Developer Associate (Exam AI-103)
-  org: Microsoft
-  category: vendor-ai
-  focus: Designing, building, securing, and deploying generative AI and agentic applications with Python and Microsoft Foundry.
-  format: Proctored exam, 120 minutes, may include interactive components
-  level: Intermediate
-  cost_usd: null
-  prerequisites: Experience developing apps with Python and Azure AI services
-  url: https://learn.microsoft.com/en-us/credentials/certifications/exams/ai-103/
-  status: available
-  launched: 2026-04
-  last_verified: "2026-09-25"
-  notes: Successor to AI-102 Azure AI Engineer Associate, which was scheduled to retire 2026-06-30, a date now past. Page confirms the Python plus Microsoft Foundry scope and includes securing Azure AI solutions.
-
-- id: gcp-professional-machine-learning-engineer
-  name: Google Cloud Professional Machine Learning Engineer
-  org: Google Cloud
-  category: vendor-ai
-  focus: Architecting, scaling, automating, and monitoring ML/AI solutions on Google Cloud, including responsible AI and model governance.
-  format: 50-60 questions, 2 hours, online or onsite proctored
-  level: Advanced
-  cost_usd: 200
-  prerequisites: Recommended 3+ years industry experience incl. 1+ year on Google Cloud
-  url: https://cloud.google.com/learn/certification/machine-learning-engineer
-  status: available
+- id: "eccouncil-coasp"
+  name: "EC-Council Certified Offensive AI Security Professional (COASP)"
+  org: "EC-Council"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "mixed"
+  focus: "Attacking and defending AI and machine-learning systems, including LLM applications and adversarial AI."
+  format: "Live-proctored, six-hour exam with 65 multiple-choice questions and five performance challenges."
+  level: "Advanced"
+  prerequisites: "Mandatory: official EC-Council training, or approved eligibility application documenting two years of information-security experience. Self-study applicants must obtain approval before buying the voucher."
+  url: "https://www.eccouncil.org/ai-courses/certified-offensive-ai-security-professional-coasp/"
+  status: "beta"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Recently updated for Gemini Enterprise Agent Platform; covers responsible AI and data/model governance.
+  last_verified: "2026-10-09"
+  notes:
+    - "The certification page explicitly offers beta-exam applications while the official store sells an initial exam voucher. The reviewed pages do not establish a completed transition to general availability; confirm scheduling and beta terms before buying."
+    - "Self-study eligibility adds a nonrefundable USD 100 application fee; this fee is included in official training fees. Voucher expires after one year."
+    - "Training labs do not by themselves imply a practical certification assessment."
+    - "The certification page states an annual continuing-education fee of USD 80."
+  pricing:
+    amount: 650
+    currency: "USD"
+    basis: "exam"
+    details: "Initial remotely proctored exam voucher USD 650; approved self-study applicants also pay USD 100 eligibility application fee."
+    purchase_url: "https://store.eccouncil.org/product/coasp-exam-voucher-rps/"
+  sources:
+    - url: "https://www.eccouncil.org/ai-courses/certified-offensive-ai-security-professional-coasp/"
+      label: "Official certification page"
+    - url: "https://store.eccouncil.org/product/coasp-exam-voucher-rps/"
+      label: "Official initial exam voucher"
+    - url: "https://cert.eccouncil.org/application-process-eligibility.html"
+      label: "Mandatory eligibility and application fee"
+    - url: "https://cert.eccouncil.org/certified-offensive-ai-security-professional.html"
+      label: "Official certification, beta label and exam policy"
+    - url: "https://cert.eccouncil.org/ai-program-beta-testing-form.html"
+      label: "Current beta application form"
 
-- id: gcp-generative-ai-leader
-  name: Google Cloud Generative AI Leader
-  org: Google Cloud
-  category: vendor-ai
-  focus: Business-level generative AI fundamentals, Google Cloud gen AI offerings, and responsible adoption strategy.
-  format: 50-60 multiple choice questions, 90 minutes, proctored
-  level: Entry
-  cost_usd: 99
+- id: "giac-gaipt"
+  name: "GIAC AI Penetration Tester (GAIPT)"
+  org: "GIAC"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "mixed"
+  focus: "Testing and exploiting LLMs, RAG, agents, MCP servers and AI infrastructure."
+  format: "Proctored CyberLive assessment advertised; question count, duration and passing score not yet published."
+  level: "Intermediate"
   prerequisites: null
-  url: https://cloud.google.com/learn/certification/generative-ai-leader
-  status: available
-  launched: 2025
-  last_verified: "2026-09-25"
-  notes: Non-technical audience; valid 3 years.
-
-- id: oci-ai-foundations-associate
-  name: Oracle Cloud Infrastructure Certified AI Foundations Associate (1Z0-1122-26)
-  org: Oracle
-  category: vendor-ai
-  focus: Foundational AI/ML concepts and Oracle Cloud Infrastructure AI/ML services.
-  format: 30 questions, 60 minutes, online
-  level: Entry
-  cost_usd: 0
-  prerequisites: null
-  url: https://learn.oracle.com/ols/learning-path/become-an-oci-ai-foundations-associate-2025/118071/147781
-  status: available
-  launched: 2023
-  last_verified: "2026-09-25"
-  notes: Learning path live, page title confirms the credential name. Oracle MyLearn renders its detail client-side, so the fetched HTML carries no exam code, price or format — the free pricing and the 1Z0-1122-26 exam code carried from the July 2026 check were not re-confirmed at this verification.
-
-- id: oci-generative-ai-professional
-  name: Oracle Cloud Infrastructure Certified Generative AI Professional (1Z0-1127)
-  org: Oracle
-  category: vendor-ai
-  focus: OCI Generative AI Service, LLMs, prompt engineering, fine-tuning, RAG pipelines, and GenAI agents.
-  format: Proctored exam (details on Oracle MyLearn)
-  level: Intermediate
-  cost_usd: null
-  prerequisites: null
-  url: https://learn.oracle.com/ols/learning-path/become-an-oci-generative-ai-professional-2025/118071/147863
-  status: available
-  launched: 2024
-  last_verified: "2026-09-25"
-  notes: Learning path live, page title confirms the credential name. Oracle MyLearn renders its detail client-side, so the fetched HTML carries no exam code, price or format. The 2026 exam code 1Z0-1127-26 remains a secondary-source report and is still unverified against Oracle.
-
-- id: nvidia-nca-aiio
-  name: NVIDIA-Certified Associate - AI Infrastructure and Operations (NCA-AIIO)
-  org: NVIDIA
-  category: vendor-ai
-  focus: Foundational concepts in deploying and operating NVIDIA AI infrastructure.
-  format: 1-hour proctored exam
-  level: Entry
-  cost_usd: 125
-  prerequisites: null
-  url: https://www.nvidia.com/en-us/learn/certification/
-  status: available
+  url: "https://www.giac.org/certifications/offensive-ai-penetration-tester-gaipt"
+  status: "upcoming"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Valid 2 years; professional-tier siblings NCP-AII ($400), NCP-AIO ($500), NCP-AIN ($400).
+  last_verified: "2026-10-09"
+  notes:
+    - "Official page is marked Presale; operational exam availability and standalone purchase terms remain unconfirmed."
+    - "Associated course is SANS SEC536, not SEC546."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Not listed in the official GIAC price table; do not infer the USD 999 fee of other GIAC exams."
+    purchase_url: null
+  sources:
+    - url: "https://www.giac.org/certifications/offensive-ai-penetration-tester-gaipt"
+      label: "Official certification page"
+    - url: "https://www.sans.org/cyber-security-courses/adversarial-ai"
+      label: "Associated SEC536 course"
+    - url: "https://www.giac.org/pricing"
+      label: "GIAC fees"
 
-- id: nvidia-nca-genl
-  name: NVIDIA-Certified Associate - Generative AI LLMs (NCA-GENL)
-  org: NVIDIA
-  category: vendor-ai
-  focus: Foundational generative AI and large language model concepts on NVIDIA platforms.
-  format: 1-hour proctored exam
-  level: Entry
-  cost_usd: 125
+- id: "htb-coae"
+  name: "HTB Certified Offensive AI Expert (COAE)"
+  org: "Hack The Box"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Offensive assessment of machine-learning systems, LLM applications, agents and AI supply chains."
+  format: "Practical assessment in an enterprise-style environment with a commercial-quality penetration-test report."
+  level: "Advanced"
+  prerequisites: "Completion of 100% of the AI Red Teamer job-role path is mandatory. Web penetration testing, Python, ML foundations and relevant Python libraries are recommended."
+  url: "https://academy.hackthebox.com/preview/certifications/htb-certified-offensive-ai-expert"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The USD 210 voucher is not a complete starting-from-zero training-and-exam price."
+    - "Mandatory path completion is an eligibility gate, distinct from recommended background knowledge."
+  pricing:
+    amount: 210
+    currency: "USD"
+    basis: "exam"
+    details: "Exam voucher only; required learning-path access costs extra. Silver Annual currently costs USD 490 and includes path access plus a voucher; announced price becomes USD 550 on 2026-10-12."
+    purchase_url: "https://academy.hackthebox.com/billing"
+  sources:
+    - url: "https://academy.hackthebox.com/preview/certifications/htb-certified-offensive-ai-expert"
+      label: "Official certification"
+    - url: "https://academy.hackthebox.com/preview/certifications/htb-certified-offensive-ai-expert/prerequisites"
+      label: "Mandatory and recommended prerequisites"
+    - url: "https://help.hackthebox.com/en/articles/13677074-academy-subscriptions"
+      label: "Voucher and subscription pricing"
+    - url: "https://www.hackthebox.com/blog/new-academy-pricing"
+      label: "Announced subscription price change"
+
+- id: "learn-prompting-airtp-plus"
+  name: "AI Red Teaming Professional Certification (AIRTP+)"
+  org: "Learn Prompting"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Red teaming LLM applications through prompt injection, jailbreaks and evaluation of defensive controls."
+  format: "Twenty-four-hour online practical certification exam."
+  level: "Unspecified"
+  prerequisites: "No formal prerequisite credential was verified; intended for people with relevant AI or security experience."
+  url: "https://learnprompting.org/certificates/ai-red-teaming-professional-certification"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Despite the /certificates/ URL, the issuer describes a distinct practical certification examination."
+  pricing:
+    amount: 299
+    currency: "USD"
+    basis: "exam"
+    details: "One exam attempt. Optional USD 1,199 course-and-certification bundle includes two attempts; the exam-only route is separately sold."
+    purchase_url: "https://buy.stripe.com/cNifZh7o54eh8cC06x3wQ0q"
+  sources:
+    - url: "https://learnprompting.org/certificates/ai-red-teaming-professional-certification"
+      label: "Certification exam, format and purchase options"
+
+- id: "offsec-osai"
+  name: "OffSec AI Red Teamer (OSAI / OSAI+)"
+  org: "OffSec (Offensive Security)"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Advanced red teaming of LLMs, retrieval systems, agents and enterprise AI infrastructure."
+  format: "Twenty-four-hour proctored practical exam, followed by 24 hours to submit the report."
+  level: "Advanced"
+  prerequisites: "OSCP-equivalent penetration-testing ability, networking, Linux/Windows and basic scripting are recommended. Prior AI experience is helpful, not required."
+  url: "https://www.offsec.com/courses/ai-300/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Passing the same exam awards OSAI and OSAI+; these are not separate exams or different passing-score tiers."
+    - "OSAI is lifetime; OSAI+ has a three-year maintenance cycle."
+    - "Distinct from Securium Academy's similarly named OSAI credential."
+  pricing:
+    amount: 1749
+    currency: "USD"
+    basis: "bundle"
+    details: "AI-300 course-and-certification bundle: 90 days of training/labs and one attempt. Learn One is USD 2,749 annually with one year of access and two attempts. No initial exam-only route was verified."
+    purchase_url: "https://portal.offsec.com/checkout/products?choice=204&choice=67&cid=266"
+  sources:
+    - url: "https://www.offsec.com/courses/ai-300/"
+      label: "AI-300 curriculum, prerequisites and bundles"
+    - url: "https://help.offsec.com/hc/en-us/articles/46593096734612-OSAI-Exam-Guide"
+      label: "Exam guide"
+    - url: "https://help.offsec.com/hc/en-us/articles/46669767163156-OSAI-Advanced-AI-Red-Teaming-Exam-FAQ"
+      label: "Exam availability and OSAI/OSAI+ distinction"
+
+- id: "rtl-caipj"
+  name: "Certified Artificial Intelligence PenTest Junior (CAIPJ)"
+  org: "Red Team Leaders"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Prompt injection, tool misuse and business-logic attacks against LLM applications."
+  format: "Twenty-four-hour practical exam with ten flag-based challenges in an intentionally vulnerable LLM support application."
+  level: "Entry"
+  prerequisites: "Basic web-security knowledge and familiarity with LLM prompts, tool calling and common LLM attacks are expected; no formal prior certification was verified."
+  url: "https://courses.redteamleaders.com/exams/332cc606-fa20-42dd-9750-b25e8c59ad35"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "A practical junior LLM pentesting exam; the provider's optional preparatory courses are separate products."
+  pricing:
+    amount: 148.07
+    currency: "BRL"
+    basis: "exam"
+    details: "Current localized storefront price BRL 148.07 promotional / BRL 222.11 regular. The provider converts its underlying prices into the catalog currency; displayed amounts may change with that conversion."
+    purchase_url: "https://courses.redteamleaders.com/exams/332cc606-fa20-42dd-9750-b25e8c59ad35"
+  sources:
+    - url: "https://courses.redteamleaders.com/exams/332cc606-fa20-42dd-9750-b25e8c59ad35"
+      label: "Official exam description and storefront"
+    - url: "https://courses.redteamleaders.com/api/student/catalog"
+      label: "Public issuer catalog and price metadata"
+
+- id: "securium-osai"
+  name: "Offensive Security Artificial Intelligence (OSAI / OSAI-101)"
+  org: "Securium Academy"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Offensive assessment of LLMs, RAG, multi-agent workflows and AI infrastructure."
+  format: "Issuer describes a 24-hour proctored practical exam in a simulated enterprise environment, followed by 24 hours for the report."
+  level: "Advanced"
+  prerequisites: "A cybersecurity or IT background is expected; no mandatory prior certification was verified."
+  url: "https://www.securiumacademy.com/osai-certification/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "This is issued by Securium Academy, not OffSec; the similar OSAI name must not be treated as equivalence."
+    - "Assessment details are the issuer's published description; no independent equivalence or recognition claim is made."
+  pricing:
+    amount: null
+    currency: null
+    basis: "quote"
+    details: "No public exam fee verified. Enrolment inquiry is required for the training-and-exam package, which advertises one attempt and one free retake."
+    purchase_url: "https://www.securiumacademy.com/osai-certification/"
+  sources:
+    - url: "https://www.securiumacademy.com/osai-certification/"
+      label: "Issuer certification, exam FAQ and enrolment inquiry"
+
+- id: "tcm-papa"
+  name: "Practical AI Pentest Associate (PAPA)"
+  org: "TCM Security"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Entry-level penetration testing of AI and agent applications, including prompt injection and tool-related attack paths."
+  format: "Two days to perform an AI penetration test, followed by two days to submit a professional report; no multiple-choice exam."
+  level: "Entry"
+  prerequisites: "Basic IT knowledge and a computer capable of running virtual machines are expected; prior penetration-testing methodology is useful."
+  url: "https://certifications.tcm-sec.com/papa/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Exam access lasts 12 months; the earned certification does not expire."
+    - "Hands-on training and the independently graded examination are separate parts of the package."
+  pricing:
+    amount: 249
+    currency: "USD"
+    basis: "bundle"
+    details: "Includes one exam attempt, one free retake and 12 months of the included preparatory training. The listed price is the combined exam-and-training package."
+    purchase_url: "https://certifications.tcm-sec.com/cart/?add-to-cart=987537028"
+  sources:
+    - url: "https://certifications.tcm-sec.com/papa/"
+      label: "Issuer exam description, included training and price"
+
+- id: "secops-c-agaipen"
+  name: "Certified Agentic AI Pentester (C-AgAIPen)"
+  org: "The SecOps Group"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Security testing of agents, tool use, memory, identities, MCP, RAG and multi-agent attack chains."
+  format: "Four-hour online, on-demand practical challenge exam accessed through a VPN; candidates exploit vulnerable applications and capture flags."
+  level: "Intermediate"
+  prerequisites: "Prior AI/ML and agentic-application pentesting are expected; two years of professional pentesting and taking C-AI/MLPen first are recommended, not mandatory certifications."
+  url: "https://pentestingexams.com/certifications/professional/certified-agentic-ai-pentester/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer provides the exam rather than an included training course."
+    - "AI tools are prohibited during the exam; the credential does not expire."
+  pricing:
+    amount: 83
+    currency: "USD"
+    basis: "exam"
+    details: "Currently displayed USD 83 with code 75-OFF; displayed regular price USD 331. Includes one free retake. The storefront localizes currency and exchange-derived prices, so the displayed amount can vary by region/date."
+    purchase_url: "https://pentestingexams.com/certifications/professional/certified-agentic-ai-pentester/"
+  sources:
+    - url: "https://pentestingexams.com/certifications/professional/certified-agentic-ai-pentester/"
+      label: "Official exam format, syllabus, prerequisites and current displayed price"
+
+- id: "secops-c-ai-mlpen"
+  name: "Certified AI/ML Pentester (C-AI/MLPen)"
+  org: "The SecOps Group"
+  category: "offensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Exploiting LLM and AI/ML application vulnerabilities, including injection, leakage, poisoning and unsafe integrations."
+  format: "Four-hour online, on-demand practical challenge exam accessed through a VPN; candidates exploit vulnerable applications and capture flags."
+  level: "Intermediate"
+  prerequisites: "Prior AI/ML pentesting and application-security knowledge are expected; at least one year of professional pentesting is recommended, not an enforced credential gate."
+  url: "https://pentestingexams.com/certifications/professional/certified-ai-ml-pentester/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer provides the exam rather than an included training course."
+    - "AI tools are prohibited during the exam; the credential does not expire."
+  pricing:
+    amount: 83
+    currency: "USD"
+    basis: "exam"
+    details: "Currently displayed USD 83 with code 75-OFF; displayed regular price USD 331. Includes one free retake. The storefront localizes currency and exchange-derived prices, so the displayed amount can vary by region/date."
+    purchase_url: "https://pentestingexams.com/certifications/professional/certified-ai-ml-pentester/"
+  sources:
+    - url: "https://pentestingexams.com/certifications/professional/certified-ai-ml-pentester/"
+      label: "Official exam format, syllabus, prerequisites and current displayed price"
+
+- id: "aicerts-security-expert"
+  name: "AI+ Security Expert (AT-2102)"
+  org: "AI CERTs"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI application threat modelling, LLM/RAG attacks, secure deployment, monitoring and adversarial testing."
+  format: "50 multiple-choice questions; 90 minutes; 70% pass; online proctored."
+  level: "Intermediate"
+  prerequisites: "Cybersecurity, AI/ML, cloud application security, assessment and programming knowledge expected; no credential gate stated."
+  url: "https://store.aicerts.ai/certifications/security/ai-security-expert/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Formerly AI+ Security Level 2."
+    - "Hands-on practice/capstone content is preparation; the advertised certification examination is MCQ."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "bundle"
+    details: "Self-study materials, certification exam and one free retake. Current product price; confirm promotions at checkout."
+    purchase_url: "https://store.aicerts.ai/certifications/security/ai-security-expert/"
+  sources:
+    - url: "https://store.aicerts.ai/certifications/security/ai-security-expert/"
+      label: "Official programme or exam page"
+
+- id: "appsecengineer-ai-agent-security"
+  name: "Certified AI Agent Security Professional"
+  org: "AppSecEngineer"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "unconfirmed"
+  focus: "Advertised security assessment of AI agents, LLM applications and MCP integrations."
+  format: "Advertises a 48-hour exam with practical challenges, comprehension questions and a recorded project reviewed by an evaluator; AI-specific implementation is not fully verified."
+  level: "Unspecified"
+  prerequisites: "The page conflicts on whether curriculum completion is mandatory; AI-specific eligibility should be confirmed with the issuer."
+  url: "https://www.appsecengineer.com/enterprises/ai-agent-security-certification"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The AI certification is advertised, but parts of its curriculum, prerequisites and pricing describe a different DevSecOps credential."
+    - "The AI-specific checkout exists; current price and exam arrangements remain unverified. Do not substitute the DevSecOps exam prices."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "The page advertises an exam-only option with two attempts, but displayed pricing and purchase buttons contain reused DevSecOps content. No AI-specific price is treated as verified."
+    purchase_url: "https://checkout.appsecengineer.com/certified_ai_security_engineer"
+  sources:
+    - url: "https://www.appsecengineer.com/enterprises/ai-agent-security-certification"
+      label: "Advertised credential and conflicting exam/pricing content"
+    - url: "https://checkout.appsecengineer.com/certified_ai_security_engineer"
+      label: "AI-specific checkout"
+
+- id: "aicci-aisa"
+  name: "AICCI AI Security Analyst (AISA)"
+  org: "Artificial Intelligence Competence Certification Institute"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI-specific threat modelling, security risk, architecture and incident response."
+  format: "Issuer advertises 40 multiple-choice questions; 60 minutes; 65% pass; online closed-book proctored."
+  level: "Intermediate"
+  prerequisites: "Conflicting official wording: main section says none and recommends AIFO; FAQ says AIFO certification required."
+  url: "https://www.aicci.org/certifications/ai-security-analyst-certification-aisa"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Delivery purchase terms and mandatory eligibility remain unresolved; not included in verified available count."
+  pricing:
+    amount: null
+    currency: null
+    basis: "quote"
+    details: "Public exam price not published; three-day training route advertised."
+    purchase_url: null
+  sources:
+    - url: "https://www.aicci.org/certifications/ai-security-analyst-certification-aisa"
+      label: "Official programme or exam page"
+
+- id: "bluecert-ai-security-fundamentals-associate"
+  name: "BlueCert AI Security Fundamentals – Associate"
+  org: "BlueCert"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Dataset controls and model verification."
+  format: "General policy: timed scenario-based multiple-choice examination."
+  level: "Intermediate"
   prerequisites: null
-  url: https://www.nvidia.com/en-us/learn/certification/
-  status: available
+  url: "https://www.bluecert.org/certifications/ai-security"
+  status: "available"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Professional tier NCP-GENL ($200) also available; multimodal variant NCA-GENM.
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer advertises this examination through its level-specific objectives, registration flow and general exam policy."
+    - "Per-level duration, pass mark, prerequisites and proctoring were not verified. Unknown public pricing does not imply the examination is unavailable."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Per-level exam price unavailable publicly."
+    purchase_url: "https://www.bluecert.org/register"
+  sources:
+    - url: "https://www.bluecert.org/certifications/ai-security"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/get-certified"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/register"
+      label: "Official programme or exam page"
 
-- id: nvidia-ncp-aai
-  name: NVIDIA-Certified Professional - Agentic AI (NCP-AAI)
-  org: NVIDIA
-  category: vendor-ai
-  focus: Professional-level design and deployment of agentic AI systems on NVIDIA platforms.
-  format: 2-hour proctored exam
-  level: Advanced
-  cost_usd: 200
+- id: "bluecert-ai-security-fundamentals-practitioner"
+  name: "BlueCert AI Security Fundamentals – Practitioner"
+  org: "BlueCert"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Threats and model-integrity basics."
+  format: "General policy: timed scenario-based multiple-choice examination."
+  level: "Entry"
   prerequisites: null
-  url: https://www.nvidia.com/en-us/learn/certification/
-  status: available
+  url: "https://www.bluecert.org/certifications/ai-security"
+  status: "available"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Current-generation agentic AI credential; valid 2 years.
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer advertises this examination through its level-specific objectives, registration flow and general exam policy."
+    - "Per-level duration, pass mark, prerequisites and proctoring were not verified. Unknown public pricing does not imply the examination is unavailable."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Per-level exam price unavailable publicly."
+    purchase_url: "https://www.bluecert.org/register"
+  sources:
+    - url: "https://www.bluecert.org/certifications/ai-security"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/get-certified"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/register"
+      label: "Official programme or exam page"
 
-- id: lf-pytorch-certified-associate
-  name: PyTorch Certified Associate (PTCA)
-  org: Linux Foundation (PyTorch Foundation)
-  category: vendor-ai
-  focus: Foundational PyTorch and AI model development skills for engineering and research roles.
-  format: Online proctored multiple-choice exam, 120 minutes
-  level: Entry
-  cost_usd: 250
+- id: "bluecert-ai-security-fundamentals-professional"
+  name: "BlueCert AI Security Fundamentals – Professional"
+  org: "BlueCert"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Enterprise AI defenses and security policy."
+  format: "General policy: timed scenario-based multiple-choice examination."
+  level: "Advanced"
   prerequisites: null
-  url: https://training.linuxfoundation.org/certification/pytorch-certified-associate-ptca/
-  status: available
+  url: "https://www.bluecert.org/certifications/ai-security"
+  status: "available"
   launched: null
-  last_verified: "2026-09-25"
-  notes: Only AI/ML person-certification in LF catalog as of check; valid 2 years, one retake included.
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer advertises this examination through its level-specific objectives, registration flow and general exam policy."
+    - "Per-level duration, pass mark, prerequisites and proctoring were not verified. Unknown public pricing does not imply the examination is unavailable."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Per-level exam price unavailable publicly."
+    purchase_url: "https://www.bluecert.org/register"
+  sources:
+    - url: "https://www.bluecert.org/certifications/ai-security"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/get-certified"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/register"
+      label: "Official programme or exam page"
 
-- id: databricks-generative-ai-engineer-associate
-  name: Databricks Certified Generative AI Engineer Associate
-  org: Databricks
-  category: vendor-ai
-  focus: Designing, building, deploying, and governing LLM-enabled solutions on Databricks (Mosaic AI, MLflow, Unity Catalog).
-  format: 45 scored multiple-choice questions, 90 minutes, proctored
-  level: Intermediate
-  cost_usd: 200
-  prerequisites: Recommended 6+ months hands-on generative AI solution experience
-  url: https://www.databricks.com/learn/certification/genai-engineer-associate
-  status: available
-  launched: 2024
-  last_verified: "2026-09-25"
-  notes: Governance domain is 8% of exam (Unity Catalog); 2-year validity.
-
-- id: snowflake-snowpro-specialty-gen-ai
-  name: SnowPro Specialty - Gen AI (GES-C02)
-  org: Snowflake
-  category: vendor-ai
-  focus: Generative AI on Snowflake (Cortex functions, agents, search, Document AI) with a substantial Gen AI governance domain.
-  format: Proctored exam; C02 specifics not published (115 minutes / 750 of 1000 carried from GES-C01, unconfirmed)
-  level: Advanced
-  cost_usd: 375
-  prerequisites: SnowPro Core or SnowPro Associate Platform certification; 1+ year Gen AI experience with Snowflake
-  url: https://learn.snowflake.com/en/certifications/snowpro-GenAI-C02/
-  status: available
+- id: "bluecert-ai-security-specialist-practitioner"
+  name: "BlueCert AI Security Specialist – Practitioner"
+  org: "BlueCert"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI vulnerabilities and pipeline security."
+  format: "General policy: timed scenario-based multiple-choice examination."
+  level: "Entry"
+  prerequisites: null
+  url: "https://www.bluecert.org/certifications/ai-security"
+  status: "available"
   launched: null
-  last_verified: "2026-09-25"
-  notes: The GES-C01 page recorded in July 2026 now returns 404; the certification continues as GES-C02 at the new URL, fetched live for this entry. $375 per attempt confirmed on the new page. Exam duration, question count, passing score and the governance-domain weighting are not published on the C02 page — the 115-minute / 750-of-1000 figures carried over from C01 are unconfirmed for C02.
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer advertises this examination through its level-specific objectives, registration flow and general exam policy."
+    - "Per-level duration, pass mark, prerequisites and proctoring were not verified. Unknown public pricing does not imply the examination is unavailable."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Per-level exam price unavailable publicly."
+    purchase_url: "https://www.bluecert.org/register"
+  sources:
+    - url: "https://www.bluecert.org/certifications/ai-security"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/get-certified"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/register"
+      label: "Official programme or exam page"
+
+- id: "certiprof-aisecpc"
+  name: "CertiProf AI Security Professional Certification (AISECPC)"
+  org: "CertiProf"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Securing AI-enabled systems, evaluating AI-specific risks and supporting responsible deployment."
+  format: "40 questions; 60 minutes; 60% pass; online scenario-based exam. Proctoring not verified."
+  level: "Entry"
+  prerequisites: "None; coding experience not required."
+  url: "https://certiprof.com/products/ai-security-professional-certification-aisecpc-certiprof"
+  status: "beta"
+  launched: "2026-10-09"
+  last_verified: "2026-10-09"
+  notes:
+    - "Official page says materials and exam access available from October 9, 2026."
+    - "Passing beta earns the certification; the Early Adopter badge awarded at purchase is separate and does not establish a passed exam."
+    - "Page uses both AISECPC and AISPC shorthand; product title retained."
+  pricing:
+    amount: 50
+    currency: "USD"
+    basis: "bundle"
+    details: "Beta access includes two exam attempts and self-study materials; limited to 1,000 participants. Planned post-beta price USD150."
+    purchase_url: "https://certiprof.com/products/ai-security-professional-certification-aisecpc-certiprof"
+  sources:
+    - url: "https://certiprof.com/products/ai-security-professional-certification-aisecpc-certiprof"
+      label: "Official product page; live public HTML including USD price and October 9 beta access"
+
+- id: "csa-taise"
+  name: "CSA Trusted AI Safety Expert (TAISE) Certificate"
+  org: "Cloud Security Alliance / Northeastern University"
+  category: "defensive"
+  security_focus: "mixed"
+  assessment_type: "course-assessment"
+  focus: "AI safety, cloud/data security, lifecycle threats, governance and responsible adoption."
+  format: "Course plus 60-question multiple-choice assessment; 120 minutes; 80% pass; two attempts."
+  level: "Intermediate"
+  prerequisites: "None."
+  url: "https://cloudsecurityalliance.org/education/taise/"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded: CSA describes TAISE as a certificate programme, not a personnel certification. Its final exam does not change that programme classification."
+  pricing:
+    amount: null
+    currency: null
+    basis: "bundle"
+    details: "Issuer advertises $795 for training plus two exam attempts; excluded certificate programme."
+    purchase_url: "https://cloudsecurityalliance.org/education/taise/"
+  sources:
+    - url: "https://cloudsecurityalliance.org/education/taise/"
+      label: "Official programme or exam page"
+
+- id: "comptia-secai-plus"
+  name: "CompTIA SecAI+ (CY0-001)"
+  org: "CompTIA"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "mixed"
+  focus: "Securing AI systems, AI-assisted security operations and AI governance, risk and compliance."
+  format: "Proctored exam; up to 60 multiple-choice and performance-based questions, 60 minutes; passing score 600/900."
+  level: "Intermediate"
+  prerequisites: "Recommended: 3–4 years IT experience including 2+ years hands-on cybersecurity; Security+, CySA+, PenTest+ or equivalent. No mandatory prior certification."
+  url: "https://www.comptia.org/en-us/certifications/secai/"
+  status: "available"
+  launched: "2026-02-17"
+  last_verified: "2026-10-09"
+  notes:
+    - "English and Japanese versions. Pricing is the US/NA storefront; other regions may differ."
+    - "Price verified from the official page product data for SecAI+ Voucher, product 810182709819."
+  pricing:
+    amount: 298
+    currency: "USD"
+    basis: "exam"
+    details: "One exam attempt; voucher plus retake assurance USD 332. Training sold separately."
+    purchase_url: "https://www.comptia.org/en-us/certifications/secai/#buy-now"
+  sources:
+    - url: "https://www.comptia.org/en-us/certifications/secai/"
+      label: "Official exam details and voucher product data"
+
+- id: "cyber-agoge-cdaisp"
+  name: "Certified DevSecOps & AI Security Practitioner (CDAISP)"
+  org: "Cyber Agoge"
+  category: "defensive"
+  security_focus: "mixed"
+  assessment_type: "practical"
+  focus: "Broad DevSecOps practice covering cloud, infrastructure, applications, pipelines, AI security and assurance; AI security is one of six skill areas."
+  format: "Proposed 48-hour practical assessment of an assigned repository, submitted changes and evidence, plus a webcam-recorded explanation; a human must confirm certification."
+  level: "Unspecified"
+  prerequisites: "Offered through the bootcamp; individual eligibility and final assessment rules must be confirmed in the participant portal."
+  url: "https://www.cyberagoge.com/cdaisp/"
+  status: "upcoming"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Assessment pass thresholds, weights, critical-fail rules and maintenance policies are still being finalized; public credential verification is planned."
+    - "The issuer distinguishes training completion from passing the assessed credential. Treat the certification as upcoming while final assessment arrangements remain unpublished."
+    - "Security is material, but this is a broader DevSecOps qualification rather than an AI-only security exam."
+  pricing:
+    amount: 599
+    currency: "GBP"
+    basis: "bundle"
+    details: "Bootcamp includes two assessment attempts. No independent exam-only purchase was verified."
+    purchase_url: "https://koi-whale-b3hf.squarespace.com/bootcamp/p/live-bootcamp-service"
+  sources:
+    - url: "https://www.cyberagoge.com/cdaisp/"
+      label: "Assessment, incomplete policies and GBP 599 price"
+    - url: "https://koi-whale-b3hf.squarespace.com/bootcamp/p/live-bootcamp-service"
+      label: "Bootcamp purchase route"
+
+- id: "dekra-aisp"
+  name: "DEKRA AI Security Professional (AISP)"
+  org: "DEKRA Certification"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI-system risk, security assessment and controls, secure development and governance."
+  format: "Online closed-book exam; 60 multiple-choice questions, 90 minutes, 60% pass. German delivery verified."
+  level: "Intermediate"
+  prerequisites: "Admission requires the AI500 preparation course or accepted equivalent evidence; confirm equivalency with the examination provider before buying the exam separately."
+  url: "https://qskills.de/en-us/training/ai500-ai-security-professional-dekra-aisp"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Distinct from EXIN AI Security Professional. DEKRA makes the certification decision; certification is valid for up to three years."
+    - "The lower EUR 355 exam price applies when bought with the provider’s course."
+  pricing:
+    amount: 405
+    currency: "EUR"
+    basis: "exam"
+    details: "Standalone online exam EUR 405 plus VAT after meeting course/equivalency admission conditions; EUR 355 plus VAT when bundled with accredited training."
+    purchase_url: "https://www.software-quality-academy.com/academy/online-pruefungen/pruefung-dekra-aisp-ai-security-professional/"
+  sources:
+    - url: "https://qskills.de/en-us/training/ai500-ai-security-professional-dekra-aisp"
+      label: "Training-provider exam and admission details"
+    - url: "https://www.software-quality-academy.com/academy/online-pruefungen/pruefung-dekra-aisp-ai-security-professional/"
+      label: "Authorized exam purchase and pricing"
+
+- id: "elephantscale-agentic-security"
+  name: "Agentic AI Security & Governance (Advanced)"
+  org: "ElephantScale"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Agent threats, adversarial ML, secure operations and governance."
+  format: "60 questions; two hours; 70% pass; ProctorWell monitored."
+  level: "Advanced"
+  prerequisites: "Intermediate level or two years AI/security experience."
+  url: "https://elephantscale.com/cybersecurity-for-ai/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Scenario/configuration analysis is not verified hands-on exploitation."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "$69 advertised per exam; dollar currency not verified. Training bundle is separate."
+    purchase_url: "https://buy.stripe.com/dRm3cugtlc306rk8133AY08"
+  sources:
+    - url: "https://elephantscale.com/cybersecurity-for-ai/"
+      label: "Official programme or exam page"
+    - url: "https://elephantscale.com/individual-certifications/"
+      label: "Official programme or exam page"
+    - url: "https://buy.stripe.com/dRm3cugtlc306rk8133AY08"
+      label: "Official programme or exam page"
+
+- id: "elephantscale-essentials"
+  name: "AI Security Essentials (Foundation)"
+  org: "ElephantScale"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI attack surfaces, threat models and defensive fundamentals."
+  format: "60 questions; two hours; 70% pass; ProctorWell monitored."
+  level: "Entry"
+  prerequisites: "Programming/API and basic cybersecurity knowledge expected."
+  url: "https://elephantscale.com/cybersecurity-for-ai/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Scenario/configuration analysis is not verified hands-on exploitation."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "$69 advertised per exam; dollar currency not verified. Training bundle is separate."
+    purchase_url: "https://buy.stripe.com/28E9ASeldgjg3f81CF3AY02"
+  sources:
+    - url: "https://elephantscale.com/cybersecurity-for-ai/"
+      label: "Official programme or exam page"
+    - url: "https://elephantscale.com/individual-certifications/"
+      label: "Official programme or exam page"
+    - url: "https://buy.stripe.com/28E9ASeldgjg3f81CF3AY02"
+      label: "Official programme or exam page"
+
+- id: "elephantscale-prompt-hacking"
+  name: "Prompt Hacking & GenAI Defense (Intermediate)"
+  org: "ElephantScale"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Prompt attacks, guardrails and RAG defenses."
+  format: "60 questions; two hours; 70% pass; ProctorWell monitored."
+  level: "Intermediate"
+  prerequisites: "Foundation level or equivalent AI experience; Python/LLM APIs."
+  url: "https://elephantscale.com/cybersecurity-for-ai/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Scenario/configuration analysis is not verified hands-on exploitation."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "$69 advertised per exam; dollar currency not verified. Training bundle is separate."
+    purchase_url: "https://buy.stripe.com/aFaeVc5OHd743f8dln3AY05"
+  sources:
+    - url: "https://elephantscale.com/cybersecurity-for-ai/"
+      label: "Official programme or exam page"
+    - url: "https://elephantscale.com/individual-certifications/"
+      label: "Official programme or exam page"
+    - url: "https://buy.stripe.com/aFaeVc5OHd743f8dln3AY05"
+      label: "Official programme or exam page"
+
+- id: "eitci-ai-ais"
+  name: "EITC/AI/AIS Artificial Intelligence Security"
+  org: "European IT Certification Institute (EITCI)"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI-system threat modelling, adversarial ML, LLM/RAG/agent security and security assurance."
+  format: "Remote knowledge assessment; exact current timing and proctoring not verified."
+  level: "Advanced"
+  prerequisites: null
+  url: "https://eitca.org/certification/eitc-ai-ais-artificial-intelligence-security/"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Borderline skills-attestation programme: provider describes an exam that can be attempted using prior knowledge, so not simply attendance, but personnel-certification status is not independently established."
+    - "Page simultaneously says places available and no places left; booking availability unresolved."
+    - "Provider recognition/accreditation marketing is not independently validated."
+  pricing:
+    amount: 110
+    currency: "EUR"
+    basis: "bundle"
+    details: "Programme enrollment includes assessment, unlimited retakes and reference learning resources."
+    purchase_url: "https://eitca.org/certification/eitc-ai-ais-artificial-intelligence-security/"
+  sources:
+    - url: "https://eitca.org/certification/eitc-ai-ais-artificial-intelligence-security/"
+      label: "Official programme or exam page"
+    - url: "https://eitca.org/how-it-works/"
+      label: "Official programme or exam page"
+
+- id: "exin-aisp"
+  name: "EXIN AI Security Professional (AISP)"
+  org: "EXIN"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Securing AI across its lifecycle using the OWASP AI Exchange body of knowledge."
+  format: "40 multiple-choice questions, 90 minutes, closed book; 65% pass."
+  level: "Advanced"
+  prerequisites: "Recommended: an existing foundation in information security or AI. No mandatory prior credential stated."
+  url: "https://www.exin.com/technologies-software/exin-bcs-artificial-intelligence/exin-ai-security-professional/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "English and French exams. This is distinct from the DEKRA AISP qualification."
+    - "Country-specific exam price was not exposed in the public certification wizard."
+  pricing:
+    amount: null
+    currency: null
+    basis: "quote"
+    details: "Country-specific price must be confirmed through EXIN's registration wizard. Brazilian training provider TIexames quotes an exam fee of USD 342, purchased separately and directly from EXIN; this is not a verified universal US checkout price or a TIexames exam sale."
+    purchase_url: "https://www.exin.com/certification-wizard/?certification=284212"
+  sources:
+    - url: "https://www.exin.com/technologies-software/exin-bcs-artificial-intelligence/exin-ai-security-professional/"
+      label: "Official certification page"
+    - url: "https://www.exin.com/certification-wizard/?certification=284212"
+      label: "Official exam registration wizard"
+    - url: "https://tiexames.com.br/cursos/curso_EXIN_AISP.php"
+      label: "TIexames reference exam fee and separate direct-EXIN purchase instructions"
+
+- id: "gamts-aiss"
+  name: "GAMTS Certified AI Security Specialist (AISS)"
+  org: "GAMTS"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI/ML security threats, secure deployment, privacy, governance and operational controls."
+  format: "Online-proctored knowledge exam; 50 multiple-choice questions, 90 minutes, 75% pass."
+  level: "Intermediate"
+  prerequisites: "No mandatory prerequisite; GAMTS AI Foundation Associate is recommended."
+  url: "https://gamts.org/gamts-certified-ai-security-specialist/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Three-year certification validity. The standard voucher is one attempt; retake-inclusive products are separate."
+  pricing:
+    amount: 399
+    currency: "USD"
+    basis: "exam"
+    details: "One initial exam attempt; an optional retake-inclusive voucher is advertised at USD 519."
+    purchase_url: "https://gamts.org/gamts-aiss-certification-exam-voucher/"
+  sources:
+    - url: "https://gamts.org/gamts-certified-ai-security-specialist/"
+      label: "Official certification page"
+    - url: "https://gamts.org/gamts-aiss-certification-exam-voucher/"
+      label: "Official exam purchase"
+
+- id: "giac-gaips"
+  name: "GIAC AI Platform Security (GAIPS)"
+  org: "GIAC"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "mixed"
+  focus: "Securing generative AI applications, agents, RAG, model integrations and development pipelines."
+  format: "Proctored exam with CyberLive practical tasks; 54 questions, 2 hours, 65% pass."
+  level: "Advanced"
+  prerequisites: "No formal prerequisite stated; preparation aligned to SANS SEC545."
+  url: "https://www.giac.org/certifications/ai-security-platform-security-gaips"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "120-day attempt window after activation; remote or test-center proctoring."
+    - "CyberLive is part of the assessment; associated SANS training is a separate purchase."
+  pricing:
+    amount: 999
+    currency: "USD"
+    basis: "exam"
+    details: "One certification attempt; applicable sales tax excluded. Retake USD 899; renewal USD 499."
+    purchase_url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tUI00000DhEGNYA3"
+  sources:
+    - url: "https://www.giac.org/certifications/ai-security-platform-security-gaips"
+      label: "Official certification page"
+    - url: "https://www.giac.org/pricing"
+      label: "Official fees"
+    - url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tUI00000DhEGNYA3"
+      label: "Exam registration route"
+
+- id: "gsdc-caisp"
+  name: "GSDC Certified AI Security Professional (CAISP)"
+  org: "Global Skill Development Council"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Threat modelling, AI/LLM application defenses, adversarial ML, agent security and AI security governance."
+  format: "40 multiple-choice questions; 90 minutes; 65% pass; closed book."
+  level: "Intermediate"
+  prerequisites: "No mandatory prerequisites."
+  url: "https://www.gsdcouncil.org/ai-security-certification"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Training includes practical activities; the published exam is knowledge-based."
+    - "Public page pricing varied during verification; no lower checkout price was confirmed."
+  pricing:
+    amount: 400
+    currency: "USD"
+    basis: "bundle"
+    details: "Current single-access offer includes exam, one retake and learning resources; prior page rendering showed USD200. Confirm final checkout price."
+    purchase_url: "https://www.gsdcouncil.org/ai-security-certification"
+  sources:
+    - url: "https://www.gsdcouncil.org/ai-security-certification"
+      label: "Official programme or exam page"
+
+- id: "ine-eais"
+  name: "AI Systems Security Specialist (eAIS)"
+  org: "INE Security"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "unconfirmed"
+  focus: "Foundational AI-system security: abuse testing, secure design, controls, validation and safe operational use."
+  format: "Separate auto-graded certification exam. The official public page emphasizes practical capability but does not specify the question/lab mix or exam duration."
+  level: "Entry"
+  prerequisites: "An active INE Premium subscription and exam voucher are required. The learning path is strongly recommended rather than mandatory; no prior credential is required."
+  url: "https://ine.com/security/certifications/eais-certification"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Exam availability is confirmed; assessment_type remains unconfirmed because public exam mechanics are not sufficiently specified."
+    - "One free retake is included. Vouchers expire after 180 days, and the credential is valid for three years."
+  pricing:
+    amount: 450
+    currency: "USD"
+    basis: "exam"
+    details: "Voucher price for an existing eligible Premium subscriber; subscription cost is additional. A USD 599 bundle includes the voucher and three months of Premium, with subscription auto-renewal unless cancelled."
+    purchase_url: "https://checkout.ine.com/?product_selected=ine-ind-cert-eais"
+  sources:
+    - url: "https://ine.com/security/certifications/eais-certification"
+      label: "Certification, eligibility and exam process"
+    - url: "https://checkout.ine.com/?product_selected=ine-ind-cert-eais"
+      label: "Standalone voucher checkout"
+    - url: "https://checkout.ine.com/?product_selected=eais_premium"
+      label: "Exam-and-subscription bundle checkout"
+
+- id: "iot-security-institute-sccisp-ai"
+  name: "SCCISP AI Security"
+  org: "IoT Security Institute"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "course-assessment"
+  focus: "Security controls for AI systems and smart infrastructure."
+  format: "Course modules, quizzes and assignment-based activities."
+  level: "Unspecified"
+  prerequisites: "No five-year professional-experience requirement for this AI course."
+  url: "https://iotsecurityinstitute.com/iotsec/5-step-sccisp-process"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The official brochure describes modules, quizzes and assignments followed by an IoTSI award. Whether this is a distinct personnel-certification assessment or an assessed educational certificate remains unresolved."
+    - "Kept outside the current-certification count pending clearer certification-scheme and assessment evidence. A required training bundle would not by itself be a reason for exclusion."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Current programme/exam price not verified."
+    purchase_url: null
+  sources:
+    - url: "https://iotsecurityinstitute.com/iotsec/5-step-sccisp-process"
+      label: "Official programme or exam page"
+    - url: "https://sccispcampus.com/SCCISP_Material/SCCISP_AI_Security_Brochure01.pdf"
+      label: "Official programme or exam page"
+
+- id: "isc2-ai-security-upcoming"
+  name: "ISC2 AI security certification (name not yet finalized)"
+  org: "ISC2"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "unconfirmed"
+  focus: "Dedicated AI security professional competence; final body of knowledge remains in development."
+  format: "Certification exam under development; final format not published."
+  level: "Unspecified"
+  prerequisites: "Experience and prerequisite requirements have not been determined."
+  url: "https://www.isc2.org/new-ai-certification"
+  status: "upcoming"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Not expected to become operational until 2027. This is separate from ISC2’s existing certificate programs."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Pilot and operational pricing not determined; no public exam purchase available."
+    purchase_url: null
+  sources:
+    - url: "https://www.isc2.org/new-ai-certification"
+      label: "Official development announcement and FAQ"
+
+- id: "itcerts-caisp"
+  name: "ITCERTS Certified AI Security Professional (CAISP)"
+  org: "ITCERTS Inc."
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Securing AI/ML systems, threats and vulnerabilities, privacy, governance and security controls."
+  format: "Online-proctored, closed-book exam; 60 multiple-choice questions, 60 minutes, 70% pass."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://itcerts.myshopify.com/products/certified-ai-security-professional-caisp-exam-voucher"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "USD currency verified in the official Shopify storefront data."
+    - "CAISP is an overlapping abbreviation used by several unrelated issuers; this offering is not PECB or PDSO."
+  pricing:
+    amount: 300
+    currency: "USD"
+    basis: "exam"
+    details: "Exam voucher includes study guide, practice test and two free retakes. Voucher valid for 180 days."
+    purchase_url: "https://itcerts.myshopify.com/products/certified-ai-security-professional-caisp-exam-voucher"
+  sources:
+    - url: "https://itcerts.myshopify.com/products/certified-ai-security-professional-caisp-exam-voucher"
+      label: "Official exam voucher, format and USD storefront data"
+
+- id: "microsoft-cloud-ai-security-engineer-sc-500"
+  name: "Microsoft Certified: Cloud and AI Security Engineer Associate (SC-500)"
+  org: "Microsoft"
+  category: "defensive"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Azure and hybrid security engineering with explicit AI workload, agent identity, guardrail and runtime protection objectives."
+  format: "120-minute proctored exam; interactive components may be included."
+  level: "Intermediate"
+  prerequisites: "Recommended: practical Azure/hybrid administration, Microsoft Entra ID and Microsoft 365 familiarity."
+  url: "https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Security-focused overall, but much broader than AI security. AI tasks are a subset of the 20–25% compute domain; their separate weight is unpublished."
+  pricing:
+    amount: 165
+    currency: "USD"
+    basis: "exam"
+    details: "Standard United States Associate exam fee, not a checkout quote specific to SC-500; local price appears at scheduling."
+    purchase_url: "https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/"
+  sources:
+    - url: "https://learn.microsoft.com/en-us/credentials/certifications/cloud-and-ai-security-engineer-associate/"
+      label: "Official programme or exam page"
+    - url: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/sc-500"
+      label: "Official programme or exam page"
+    - url: "https://arch-center.azureedge.net/Learning/Credentials/Microsoft-Certification-exam-prices-effective-August-1,-2024.pdf"
+      label: "Official programme or exam page"
+
+- id: "modern-security-msec-cais"
+  name: "Modern Security Certified AI Security Expert (MSec-CAIS)"
+  org: "Modern Security"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "course-assessment"
+  focus: "Practical AI/LLM/RAG and agent application security training."
+  format: "Self-paced course and labs; certificate of completion."
+  level: "Unspecified"
+  prerequisites: null
+  url: "https://www.modernsecurity.io/"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded: the issuer FAQ explicitly confirms a certificate of completion. No separate personnel-certification exam verified."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Excluded certificate programme; no distinct certification-exam purchase is verified."
+    purchase_url: null
+  sources:
+    - url: "https://www.modernsecurity.io/"
+      label: "Official programme or exam page"
+    - url: "https://www.modernsecurity.io/pages/faq"
+      label: "Official programme or exam page"
+
+- id: "naisc-casp"
+  name: "NAISC Certified AI Security Professional (CASP)"
+  org: "National Artificial Intelligence Security Council"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "unconfirmed"
+  focus: "Issuer's AI security framework, risk assessment and controls."
+  format: "Issuer advertises online proctored multiple-choice/scenario assessment; current delivery and detailed candidate rules not verified."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://naisc.org/certifications"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Kept outside verified certification count pending accessible booking details and candidate scheme documentation."
+    - "Unrelated to CompTIA's former CASP+ credential."
+  pricing:
+    amount: null
+    currency: null
+    basis: "quote"
+    details: "Issuer advertises $250–$400 range; exact exam price, currency and purchase route not verified."
+    purchase_url: null
+  sources:
+    - url: "https://naisc.org/certifications"
+      label: "Official programme or exam page"
+
+- id: "pecb-caisp"
+  name: "PECB Certified Artificial Intelligence Security Professional (CAISP)"
+  org: "PECB"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI security across design, development and operation, including threats, controls and governance."
+  format: "Open-book certification exam; 80 multiple-choice questions, three hours. Online and paper delivery listed in the official exam catalogue."
+  level: "Advanced"
+  prerequisites: "Full CAISP: five years of professional experience, including two in information security/cybersecurity, and 300 hours of AI-security project activities. Provisional CAISP is available after passing the exam without the experience requirements."
+  url: "https://pecb.com/en/education-and-certification-for-individuals/artificial-intelligence-security-training-courses/certified-artificial-intelligence-security-professional"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "QA course code QACAISP is a delivery of this PECB qualification, not another issuer’s separate certification."
+    - "PECB distinguishes passing the exam from receiving the full experience-qualified designation."
+    - "The official partner-training terms include the first exam, one free retake, certification application fee and first year of the annual maintenance fee; the cycle must be completed within 12 months."
+    - "Alternative verified delivery: QA advertises a training-and-exam bundle from GBP 3,300 excluding VAT. These are different training packages for the same PECB qualification."
+  pricing:
+    amount: 790
+    currency: "USD"
+    basis: "bundle"
+    details: "DataConfo Academy self-study course and PECB exam bundle; price includes certification application and first-year annual maintenance fee. Self-study is advertised worldwide, with dates and registration confirmed by a person. Applicable taxes appear at checkout; this is partner pricing, not a universal PECB exam-only fee."
+    purchase_url: "https://academy.dataconfo.com/certification/certified-artificial-intelligence-security-professional/"
+  sources:
+    - url: "https://pecb.com/en/education-and-certification-for-individuals/artificial-intelligence-security-training-courses/certified-artificial-intelligence-security-professional"
+      label: "Official certification page"
+    - url: "https://www.qa.com/course-catalogue/courses/certified-ai-security-professional-qacaisp/"
+      label: "Partner bundle, included exam and public GBP price data"
+    - url: "https://help.pecb.com/list-of-pecb-exams/"
+      label: "Official exam catalogue and embedded public exam-format data"
+    - url: "https://academy.dataconfo.com/certification/certified-artificial-intelligence-security-professional/"
+      label: "DataConfo partner bundle, inclusions, and explicit US-dollar pricing"
+
+- id: "pdso-caase"
+  name: "Certified Agentic AI Security Expert (CAASE)"
+  org: "Practical DevSecOps (HYSN Technologies)"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Securing agent reasoning, memory, tools, browser and coding agents, multi-agent identities and protocols."
+  format: "Advertised assessment: six-hour practical exam with five tasks and a further 24 hours for reporting; operational exam availability is not confirmed."
+  level: "Intermediate"
+  prerequisites: "Basic Linux is expected; scripting is helpful. CAISP is recommended, not a mandatory prerequisite."
+  url: "https://www.practical-devsecops.com/certified-agentic-ai-security-expert/"
+  status: "upcoming"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Both the certification and pricing pages mark this offering Coming Soon as of verification."
+    - "The published intermediate-to-advanced curriculum and proposed assessment must not be presented as an exam available today."
+  pricing:
+    amount: 899
+    currency: "USD"
+    basis: "bundle"
+    details: "Advertised future bundle with training, 60 days of labs and one exam attempt. Still marked Coming Soon; no working standalone purchase route verified."
+    purchase_url: null
+  sources:
+    - url: "https://www.practical-devsecops.com/certified-agentic-ai-security-expert/"
+      label: "Proposed certification, curriculum and availability"
+    - url: "https://www.practical-devsecops.com/pricing/"
+      label: "Advertised price and Coming Soon label"
+
+- id: "pdso-caisp"
+  name: "Certified AI Security Professional (CAISP)"
+  org: "Practical DevSecOps (HYSN Technologies)"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "AI/LLM threat modelling, offensive testing, defensive controls and secure AI engineering."
+  format: "Six-hour practical exam with five tasks, followed by 24 hours to submit a report."
+  level: "Unspecified"
+  prerequisites: "Basic Linux familiarity is expected; scripting is helpful, not mandatory. The sold route includes the accompanying training."
+  url: "https://www.practical-devsecops.com/certified-ai-security-professional/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Covers attacking and securing AI systems; security is the central subject."
+    - "The credential follows a practical assessment, rather than course completion alone."
+  pricing:
+    amount: 1099
+    currency: "USD"
+    basis: "bundle"
+    details: "Current advertised sale price; regular USD 1,199. Includes training, 60 days of labs and one exam attempt. A new-candidate exam-only price was not verified."
+    purchase_url: "https://checkout.practical-devsecops.com/?add_to_cart_by_name=caisp"
+  sources:
+    - url: "https://www.practical-devsecops.com/certified-ai-security-professional/"
+      label: "Certification, curriculum and exam FAQ"
+    - url: "https://www.practical-devsecops.com/pricing/"
+      label: "Current issuer pricing"
+
+- id: "pdso-cmcpse"
+  name: "Certified MCP Security Expert (CMCPSE)"
+  org: "Practical DevSecOps (HYSN Technologies)"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Security of Model Context Protocol servers, tool integrations, identities and supply chains, including policy and pipeline controls."
+  format: "Six-hour practical exam with five tasks, followed by 24 hours to submit a report."
+  level: "Unspecified"
+  prerequisites: "Basic Linux familiarity is expected; scripting is helpful, not mandatory. The sold route includes training."
+  url: "https://www.practical-devsecops.com/certified-mcp-security-expert/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "MCP security is the central subject; this is narrower than a general AI security qualification."
+    - "No separate new-candidate exam-only purchase was verified."
+  pricing:
+    amount: 699
+    currency: "USD"
+    basis: "bundle"
+    details: "Current pricing page lists USD 699 for training, 60 days of labs and one exam attempt. An older FAQ still mentions a USD 599 launch offer; that lower price is not treated as current."
+    purchase_url: "https://checkout.practical-devsecops.com/?add_to_cart_by_name=cmcpse"
+  sources:
+    - url: "https://www.practical-devsecops.com/certified-mcp-security-expert/"
+      label: "Certification, curriculum and exam FAQ"
+    - url: "https://www.practical-devsecops.com/pricing/"
+      label: "Current issuer pricing"
+
+- id: "qa-apmg-ai-security-engineer"
+  name: "QA Certified AI Security Engineer"
+  org: "QA / APMG International"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Securing enterprise AI and generative-AI applications through threat modeling, defensive controls and secure engineering."
+  format: "Independent APMG-proctored exam after the course; 60 multiple-choice questions, 60 minutes, 50% pass."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://www.qa.com/course-catalogue/courses/certified-ai-security-engineer-qascaaisec/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Preparation includes hands-on exercises; the certification assessment is multiple choice."
+    - "The separate APMG exam distinguishes this qualification from course attendance alone."
+  pricing:
+    amount: 4170
+    currency: "GBP"
+    basis: "bundle"
+    details: "QA training-and-exam price from GBP 4,170 excluding VAT; no standalone initial exam purchase was verified."
+    purchase_url: "https://www.qa.com/course-catalogue/courses/certified-ai-security-engineer-qascaaisec/"
+  sources:
+    - url: "https://www.qa.com/course-catalogue/courses/certified-ai-security-engineer-qascaaisec/"
+      label: "Course, independent exam and public GBP price data"
+
+- id: "rtl-caisa"
+  name: "Certified Artificial Intelligence Security Architect (CAISA)"
+  org: "Red Team Leaders"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Architecting defenses for AI applications, agents, retrieval systems and MCP integrations."
+  format: "Eight-hour practical architecture exam with 15 graph-design scenarios evaluated by deterministic checks."
+  level: "Unspecified"
+  prerequisites: "Self-study preparation is recommended; no mandatory prior credential was verified."
+  url: "https://courses.redteamleaders.com/exams/67541d3c-ab22-4810-8f59-b5cca907bdf7"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The assessment checks architectural control graphs offline. It does not execute a model or tool code, or pentest a deployed system."
+    - "Do not present the exam as proof that any production architecture is secure."
+  pricing:
+    amount: 24.68
+    currency: "BRL"
+    basis: "exam"
+    details: "Current localized storefront price BRL 24.68 promotional / BRL 49.36 regular. The provider converts its underlying prices into the catalog currency; displayed amounts may change with that conversion."
+    purchase_url: "https://courses.redteamleaders.com/exams/67541d3c-ab22-4810-8f59-b5cca907bdf7"
+  sources:
+    - url: "https://courses.redteamleaders.com/exams/67541d3c-ab22-4810-8f59-b5cca907bdf7"
+      label: "Official exam description and storefront"
+    - url: "https://courses.redteamleaders.com/api/student/catalog"
+      label: "Public issuer catalog and price metadata"
+
+- id: "rtl-cllmse"
+  name: "Certified LLM Security Expert (CLLMSE)"
+  org: "Red Team Leaders"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "mixed"
+  focus: "Advanced LLM attacks, defenses, secure agent architecture, AI supply chains and governance."
+  format: "Six-hour exam with 150 questions: 110 multiple-choice and 40 free-text. The final ten questions use five practical attack-and-fix scenarios in a local lab."
+  level: "Advanced"
+  prerequisites: "Relevant hands-on AI security experience is expected; no mandatory earlier credential was verified."
+  url: "https://courses.redteamleaders.com/exams/73c286aa-2944-4f26-82ba-0ca14a05a4b7"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "A mixed written/practical assessment rather than a purely hands-on red-team examination."
+    - "The provider describes an offline, self-contained lab and exam package."
+  pricing:
+    amount: 0
+    currency: "BRL"
+    basis: "exam"
+    details: "Issuer advertises 100% discount code AIEXPERTSECURITY, recognized by its public pricing endpoint on verification. Storefront base price is BRL 14.81. No purchase or coupon redemption was performed."
+    purchase_url: "https://courses.redteamleaders.com/exams/73c286aa-2944-4f26-82ba-0ca14a05a4b7"
+  sources:
+    - url: "https://courses.redteamleaders.com/exams/73c286aa-2944-4f26-82ba-0ca14a05a4b7"
+      label: "Official exam description and storefront"
+    - url: "https://courses.redteamleaders.com/api/student/catalog"
+      label: "Public issuer catalog and price metadata"
+    - url: "https://courses.redteamleaders.com/api/student/exams/73c286aa-2944-4f26-82ba-0ca14a05a4b7?promo_code=AIEXPERTSECURITY"
+      label: "Public pricing response recognizing the advertised discount code"
+
+- id: "rtl-cllmsp"
+  name: "Certified LLM Security Professional (CLLMSP)"
+  org: "Red Team Leaders"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "LLM and agent security, MCP, privacy, governance, access control and incident response."
+  format: "Unproctored online knowledge exam with 200 questions: 154 multiple-choice and 46 short-answer. Scenario-based questions are not a live practical assessment."
+  level: "Unspecified"
+  prerequisites: "Relevant AI/application-security knowledge is expected; no mandatory prior credential or paid course was verified."
+  url: "https://courses.redteamleaders.com/exams/21f669cb-8f17-4d18-8a7c-a34c055aee85"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Kept distinct from CLLMSE, which adds a graded practical component."
+    - "The provider's preparation material and exam page disagree on the pass threshold; no threshold is asserted here."
+  pricing:
+    amount: 0
+    currency: "BRL"
+    basis: "exam"
+    details: "Issuer advertises 100% discount code AISECURITYFORALL, recognized by its public pricing endpoint on verification. Storefront base price is BRL 4.94. No purchase or coupon redemption was performed."
+    purchase_url: "https://courses.redteamleaders.com/exams/21f669cb-8f17-4d18-8a7c-a34c055aee85"
+  sources:
+    - url: "https://courses.redteamleaders.com/exams/21f669cb-8f17-4d18-8a7c-a34c055aee85"
+      label: "Official exam description and storefront"
+    - url: "https://courses.redteamleaders.com/api/student/catalog"
+      label: "Public issuer catalog and price metadata"
+    - url: "https://courses.redteamleaders.com/api/student/exams/21f669cb-8f17-4d18-8a7c-a34c055aee85?promo_code=AISECURITYFORALL"
+      label: "Public pricing response recognizing the advertised discount code"
+
+- id: "rtl-csaip"
+  name: "Certified Security Artificial Intelligence Programming (CSAIP)"
+  org: "Red Team Leaders"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "Implementing defensive controls in vulnerable Python applications powered by LLMs."
+  format: "Sixteen-hour practical programming exam: repair ten applications so their functional and attack-simulation tests pass; no multiple-choice component."
+  level: "Intermediate"
+  prerequisites: "Python, regular expressions, secure coding and practical LLM-security knowledge are required skills; no earlier certification is specified."
+  url: "https://courses.redteamleaders.com/exams/8a610af8-ba8c-478e-b863-2c48a7479a8e"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Assesses code changes and automated validation, not merely completion of a secure-coding course."
+  pricing:
+    amount: 98.72
+    currency: "BRL"
+    basis: "exam"
+    details: "Current localized storefront price BRL 98.72. The provider converts its underlying prices into the catalog currency; displayed amounts may change with that conversion."
+    purchase_url: "https://courses.redteamleaders.com/exams/8a610af8-ba8c-478e-b863-2c48a7479a8e"
+  sources:
+    - url: "https://courses.redteamleaders.com/exams/8a610af8-ba8c-478e-b863-2c48a7479a8e"
+      label: "Official exam description and storefront"
+    - url: "https://courses.redteamleaders.com/api/student/catalog"
+      label: "Public issuer catalog and price metadata"
+
+- id: "sans-sec546"
+  name: "SANS SEC546: Securing Agentic AI"
+  org: "SANS Institute"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "course-assessment"
+  focus: "Defending agents, memory, permissions, MCP, multi-agent workflows and runtime behavior."
+  format: "Five-day course with 19 labs and a defensive capstone; no associated certification exam verified."
+  level: "Advanced"
+  prerequisites: null
+  url: "https://www.sans.org/cyber-security-courses/securing-agentic-ai"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded: a training course, not a verified personnel certification. Page currently invites interest in beta registration."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Course pricing and a certification exam purchase were not verified."
+    purchase_url: null
+  sources:
+    - url: "https://www.sans.org/cyber-security-courses/securing-agentic-ai"
+      label: "Official course page"
+
+- id: "sisa-cspai"
+  name: "SISA Certified Security Professional for Artificial Intelligence (CSPAI)"
+  org: "SISA Institute"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI security, threat and vulnerability management, privacy and governance throughout the AI lifecycle."
+  format: "Proctored certification exam; 50 questions, one hour, 70% pass. Prometric delivery advertised."
+  level: "Intermediate"
+  prerequisites: "Mandatory: two years of full-time information-security or AI/ML experience, or 16 hours of CSPAI training, or equivalent 16-hour training covering the examination blueprint; eligibility is verified."
+  url: "https://www.sisa.ai/sisa-institute/get-certified/certification/cspai"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Certification is valid for three years. Application/eligibility review precedes examination scheduling."
+    - "Official store currently lists a certification-only price of $250 and includes the application fee, but the reviewed page does not identify the dollar currency. An unspecified convenience fee is additional."
+  pricing:
+    amount: null
+    currency: null
+    basis: "quote"
+    details: "Advertised certification-only price $250; currency and convenience-fee total require confirmation from SISA. The linked application is the official enrollment route."
+    purchase_url: "https://www.sisa.ai/sisa-institute/get-certified/application"
+  sources:
+    - url: "https://www.sisa.ai/sisa-institute/get-certified/certification/cspai"
+      label: "Official certification page"
+    - url: "https://sisa.ai/sisa-institute/training-and-workshops/explore-certifications"
+      label: "Current certification-only pricing"
+    - url: "https://prism.sisa.ai/cspai"
+      label: "Prometric examination information"
+    - url: "https://www.sisa.ai/sisa-institute/get-certified/application"
+      label: "Official application route"
+
+- id: "tryhackme-ai1"
+  name: "AI Security (AI1)"
+  org: "TryHackMe"
+  category: "defensive"
+  security_focus: "primary"
+  assessment_type: "practical"
+  focus: "AI threat modelling, prompt injection, supply-chain analysis and RAG data poisoning, covering attack and defense."
+  format: "Forty-eight-hour unproctored browser-based assessment with 13 hands-on scenarios; expected working time is six to eight hours."
+  level: "Entry"
+  prerequisites: "No formal prerequisites. Basic networking, operating systems and security knowledge are sufficient; prior AI/ML experience is not required."
+  url: "https://tryhackme.com/certification/ai-security"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The certification examination is separate from completing the AI Security learning path."
+    - "Technical work is automatically graded; written responses use AI-assisted grading. Credential validity is three years."
+  pricing:
+    amount: 399
+    currency: "USD"
+    basis: "bundle"
+    details: "Advertised package includes the exam, one free retake and three months of Premium access for preparation."
+    purchase_url: "https://tryhackme.com/certification/ai-security"
+  sources:
+    - url: "https://tryhackme.com/certification/ai-security"
+      label: "Certification package and purchase route"
+    - url: "https://help.tryhackme.com/en/articles/15301082-ai1-exam-guide"
+      label: "Assessment mechanics and eligibility"
+
+- id: "aicerts-ai-ethical-hacker-practitioner"
+  name: "AI+ Ethical Hacker Practitioner (AT-220)"
+  org: "AI CERTs"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "AI-assisted offensive and defensive cybersecurity, including LLM/RAG application security and adversarial AI."
+  format: "50 multiple-choice questions; 90 minutes; 70% pass; online proctored."
+  level: "Intermediate"
+  prerequisites: "Basic programming, networking, systems/web technology, cybersecurity and AI familiarity expected."
+  url: "https://store.aicerts.ai/certifications/security/ai-ethical-hacker-practitioner/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Advertised hands-on exercises are preparation, not evidence of a hands-on certification examination."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "bundle"
+    details: "Self-study materials, exam and one free retake; product price in the USD store."
+    purchase_url: "https://store.aicerts.ai/certifications/security/ai-ethical-hacker-practitioner/"
+  sources:
+    - url: "https://store.aicerts.ai/certifications/security/ai-ethical-hacker-practitioner/"
+      label: "Official programme or exam page"
+
+- id: "aicerts-ai-network-practitioner"
+  name: "AI+ Network Practitioner (AT-510)"
+  org: "AI CERTs"
+  category: "ai-for-security"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "General AI-enhanced networking and automation; security/zero trust is 10%, with responsible AI in a separate 8% domain."
+  format: "50 multiple-choice questions; 90 minutes; 70% pass; online proctored."
+  level: "Intermediate"
+  prerequisites: "Networking, AI/ML, scripting and cloud-infrastructure familiarity expected."
+  url: "https://store.aicerts.ai/certifications/security/ai-network-practitioner/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Advertised hands-on exercises are preparation, not evidence of a hands-on certification examination."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "bundle"
+    details: "Self-study materials, exam and one free retake; product price in the USD store."
+    purchase_url: "https://store.aicerts.ai/certifications/security/ai-network-practitioner/"
+  sources:
+    - url: "https://store.aicerts.ai/certifications/security/ai-network-practitioner/"
+      label: "Official programme or exam page"
+
+- id: "aicerts-security-compliance-practitioner"
+  name: "AI+ Security Compliance Practitioner"
+  org: "AI CERTs"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Using AI to interpret security requirements, assess gaps, maintain policies, gather evidence and monitor compliance."
+  format: "50 multiple-choice questions; 90 minutes; 70% pass; online proctored."
+  level: "Intermediate"
+  prerequisites: "Basic cybersecurity, compliance, AI and evidence-review familiarity expected; no credential gate stated."
+  url: "https://store.aicerts.ai/certifications/security/ai-security-compliance-practitioner/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "This primarily concerns AI-assisted security compliance, not an AI-system penetration test."
+    - "Hands-on practice/capstone content is preparation; the advertised certification examination is MCQ."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "bundle"
+    details: "Self-study materials, certification exam and one free retake. Current product price; confirm promotions at checkout."
+    purchase_url: "https://store.aicerts.ai/certifications/security/ai-security-compliance-practitioner/"
+  sources:
+    - url: "https://store.aicerts.ai/certifications/security/ai-security-compliance-practitioner/"
+      label: "Official programme or exam page"
+
+- id: "aicerts-security-practitioner"
+  name: "AI+ Security Practitioner (AT-2101)"
+  org: "AI CERTs"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Broad cybersecurity and AI-assisted defense; dedicated AI/LLM security and AI offensive security modules are only part of the blueprint."
+  format: "50 multiple-choice questions; 90 minutes; 70% pass; online proctored."
+  level: "Entry"
+  prerequisites: "Cybersecurity, networking, basic AI and security-tool familiarity expected; no credential gate stated."
+  url: "https://store.aicerts.ai/certifications/security/ai-security-practitioner/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Formerly AI+ Security Level 1."
+    - "Hands-on practice/capstone content is preparation; the advertised certification examination is MCQ."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "bundle"
+    details: "Self-study materials, certification exam and one free retake. Current product price; confirm promotions at checkout."
+    purchase_url: "https://store.aicerts.ai/certifications/security/ai-security-practitioner/"
+  sources:
+    - url: "https://store.aicerts.ai/certifications/security/ai-security-practitioner/"
+      label: "Official programme or exam page"
+
+- id: "aicerts-security-strategist"
+  name: "AI+ Security Strategist (AT-2103)"
+  org: "AI CERTs"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "AI for network, cloud, identity and physical security; adversarial AI and secure AI engineering form a smaller component."
+  format: "50 multiple-choice questions; 90 minutes; 70% pass; online proctored."
+  level: "Advanced"
+  prerequisites: "Issuer lists completion of AI+ Security Compliance Practitioner and AI+ Security Practitioner, plus advanced Python/Linux/security knowledge."
+  url: "https://store.aicerts.ai/certifications/security/ai-security-strategist/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Formerly AI+ Security Level 3. Secure AI engineering is 8%; adversarial AI is 6%."
+    - "Hands-on practice/capstone content is preparation; the advertised certification examination is MCQ."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "bundle"
+    details: "Self-study materials, certification exam and one free retake. Current product price; confirm promotions at checkout."
+    purchase_url: "https://store.aicerts.ai/certifications/security/ai-security-strategist/"
+  sources:
+    - url: "https://store.aicerts.ai/certifications/security/ai-security-strategist/"
+      label: "Official programme or exam page"
+
+- id: "bluecert-ai-security-specialist-associate"
+  name: "BlueCert AI Security Specialist – Associate"
+  org: "BlueCert"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Adversarial robustness and AI threat detection."
+  format: "General policy: timed scenario-based multiple-choice examination."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://www.bluecert.org/certifications/ai-security"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer advertises this examination through its level-specific objectives, registration flow and general exam policy."
+    - "Per-level duration, pass mark, prerequisites and proctoring were not verified. Unknown public pricing does not imply the examination is unavailable."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Per-level exam price unavailable publicly."
+    purchase_url: "https://www.bluecert.org/register"
+  sources:
+    - url: "https://www.bluecert.org/certifications/ai-security"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/get-certified"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/register"
+      label: "Official programme or exam page"
+
+- id: "bluecert-ai-security-specialist-professional"
+  name: "BlueCert AI Security Specialist – Professional"
+  org: "BlueCert"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "AI-driven monitoring, automation and resilience."
+  format: "General policy: timed scenario-based multiple-choice examination."
+  level: "Advanced"
+  prerequisites: null
+  url: "https://www.bluecert.org/certifications/ai-security"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The issuer advertises this examination through its level-specific objectives, registration flow and general exam policy."
+    - "Per-level duration, pass mark, prerequisites and proctoring were not verified. Unknown public pricing does not imply the examination is unavailable."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Per-level exam price unavailable publicly."
+    purchase_url: "https://www.bluecert.org/register"
+  sources:
+    - url: "https://www.bluecert.org/certifications/ai-security"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/get-certified"
+      label: "Official programme or exam page"
+    - url: "https://www.bluecert.org/register"
+      label: "Official programme or exam page"
+
+- id: "cwl-coao"
+  name: "Certified Offensive AI Operator (COAO)"
+  org: "CyberWarFare Labs"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "practical"
+  focus: "Using AI to support offensive cybersecurity operations; the associated course is Offensive Cyber Operations with AI (OCO-AI)."
+  format: "Issuer credential record describes a practical certification exam; exact current exam mechanics are not fully verified."
+  level: "Unspecified"
+  prerequisites: null
+  url: "https://cyberwarfare.live/product/offensive-cyber-operations-with-ai-oco-ai/"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "COAO is the credential; OCO-AI names the associated training, not a second certification."
+    - "The main scope is AI-assisted security work, not a dedicated assessment of securing AI systems."
+    - "An issuer credential record supports the exam's existence; current retail availability and price remain unverified."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Indexed issuer product material advertised USD 9 promotional / USD 99 regular. The current fetched product route does not expose a verifiable price or package, so these are historical advertised figures rather than a current quote."
+    purchase_url: "https://cyberwarfare.live/product/offensive-cyber-operations-with-ai-oco-ai/"
+  sources:
+    - url: "https://cyberwarfare.live/product/offensive-cyber-operations-with-ai-oco-ai/"
+      label: "Issuer product route"
+    - url: "https://labs.cyberwarfare.live/credential/achievement/6a8c4bf1ce6365c3b47b75f0"
+      label: "Issuer-issued credential and practical-exam description"
+
+- id: "giac-gasae"
+  name: "GIAC AI Security Automation Engineer (GASAE)"
+  org: "GIAC"
+  category: "ai-for-security"
+  security_focus: "none"
+  assessment_type: "mixed"
+  focus: "Applying generative AI and automation to offensive, defensive and cloud security work."
+  format: "Proctored exam with CyberLive practical tasks; 82 questions, 3 hours, 70% pass."
+  level: "Advanced"
+  prerequisites: "No formal prerequisite stated; preparation aligned to SANS SEC598."
+  url: "https://www.giac.org/certifications/ai-security-automation-engineer-gasae"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "120-day attempt window after activation; remote or test-center proctoring."
+    - "CyberLive is part of the assessment; associated SANS training is a separate purchase."
+    - "The reviewed objectives concern applying AI to cybersecurity; no explicit objective about securing AI systems was verified. The AI-for-security category describes this emphasis."
+  pricing:
+    amount: 999
+    currency: "USD"
+    basis: "exam"
+    details: "One certification attempt; applicable sales tax excluded. Retake USD 899; renewal USD 499."
+    purchase_url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tUI00000CGc5jYAD"
+  sources:
+    - url: "https://www.giac.org/certifications/ai-security-automation-engineer-gasae"
+      label: "Official certification page"
+    - url: "https://www.giac.org/pricing"
+      label: "Official fees"
+    - url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tUI00000CGc5jYAD"
+      label: "Exam registration route"
+
+- id: "giac-gmle"
+  name: "GIAC Machine Learning Engineer (GMLE)"
+  org: "GIAC"
+  category: "ai-for-security"
+  security_focus: "none"
+  assessment_type: "mixed"
+  focus: "Applying machine learning and data science to cybersecurity monitoring, threat detection and analysis."
+  format: "Proctored exam with CyberLive practical tasks; 82 questions, 3 hours, 65% pass."
+  level: "Advanced"
+  prerequisites: "No formal prerequisite stated; preparation aligned to SANS SEC595."
+  url: "https://www.giac.org/certifications/machine-learning-engineer-gmle"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "120-day attempt window after activation; remote or test-center proctoring."
+    - "CyberLive is part of the assessment; associated SANS training is a separate purchase."
+    - "The reviewed objectives concern applying AI to cybersecurity; no explicit objective about securing AI systems was verified. The AI-for-security category describes this emphasis."
+  pricing:
+    amount: 999
+    currency: "USD"
+    basis: "exam"
+    details: "One certification attempt; applicable sales tax excluded. Retake USD 899; renewal USD 499."
+    purchase_url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tHt000007PYugIAG"
+  sources:
+    - url: "https://www.giac.org/certifications/machine-learning-engineer-gmle"
+      label: "Official certification page"
+    - url: "https://www.giac.org/pricing"
+      label: "Official fees"
+    - url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tHt000007PYugIAG"
+      label: "Exam registration route"
+
+- id: "giac-goaa"
+  name: "GIAC Offensive AI Analyst (GOAA)"
+  org: "GIAC"
+  category: "ai-for-security"
+  security_focus: "minor"
+  assessment_type: "mixed"
+  focus: "Using AI for offensive cybersecurity, including reconnaissance, vulnerability discovery and attack simulation."
+  format: "Proctored exam with CyberLive practical tasks; 56 questions, 2 hours, 67% pass."
+  level: "Advanced"
+  prerequisites: "No formal prerequisite stated; preparation aligned to SANS SEC535."
+  url: "https://www.giac.org/certifications/offensive-ai-analyst-goaa"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "120-day attempt window after activation; remote or test-center proctoring."
+    - "CyberLive is part of the assessment; associated SANS training is a separate purchase."
+  pricing:
+    amount: 999
+    currency: "USD"
+    basis: "exam"
+    details: "One certification attempt; applicable sales tax excluded. Retake USD 899; renewal USD 499."
+    purchase_url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tUI00000AjgRzYAJ"
+  sources:
+    - url: "https://www.giac.org/certifications/offensive-ai-analyst-goaa"
+      label: "Official certification page"
+    - url: "https://www.giac.org/pricing"
+      label: "Official fees"
+    - url: "https://www.sans.org/order-redirect/cart?currency=USD&dataset=certifications&productId=01tUI00000AjgRzYAJ"
+      label: "Exam registration route"
+
+- id: "gsdc-agentic-ai-cybersecurity"
+  name: "GSDC Certified Agentic AI Cybersecurity Professional"
+  org: "Global Skill Development Council"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Autonomous-agent SOC, threat detection and incident response; also secures agents against prompt injection, tool misuse and excessive permissions."
+  format: "40-question online proctored multiple-choice exam; closed book. Duration/pass mark conflict within the official page."
+  level: "Intermediate"
+  prerequisites: "None mandatory; basic cybersecurity and AI familiarity recommended."
+  url: "https://www.gsdcouncil.org/agentic-ai-cybersecurity-certification"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Table says 90 minutes/65%; FAQ says 60 minutes/70%."
+    - "Five-year validity is listed, but another FAQ claims lifetime validity. Confirm current candidate terms before buying."
+    - "Capstone and demos are learning activities; advertised exam is multiple-choice."
+  pricing:
+    amount: 400
+    currency: "USD"
+    basis: "bundle"
+    details: "Single-access learning bundle including exam and one free retake; verify final checkout amount."
+    purchase_url: "https://www.gsdcouncil.org/agentic-ai-cybersecurity-certification"
+  sources:
+    - url: "https://www.gsdcouncil.org/agentic-ai-cybersecurity-certification"
+      label: "Official programme or exam page"
+
+- id: "gsdc-generative-ai-cybersecurity"
+  name: "GSDC Certified Generative AI in Cybersecurity"
+  org: "Global Skill Development Council"
+  category: "ai-for-security"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Using generative AI for detection, malware analysis and response, with a smaller adversarial-attack/privacy component."
+  format: "40 multiple-choice questions; 90 minutes; 65% pass; online closed-book exam."
+  level: "Intermediate"
+  prerequisites: "Programming knowledge beneficial; no mandatory qualification stated."
+  url: "https://www.gsdcouncil.org/certified-generative-ai-in-cybersecurity"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The main emphasis is applying AI to cybersecurity rather than attacking or securing AI systems."
+  pricing:
+    amount: 200
+    currency: "USD"
+    basis: "bundle"
+    details: "Advertised single-access offer includes exam, one retake and learning resources; final checkout price may vary."
+    purchase_url: "https://www.gsdcouncil.org/certified-generative-ai-in-cybersecurity"
+  sources:
+    - url: "https://www.gsdcouncil.org/certified-generative-ai-in-cybersecurity"
+      label: "Official programme or exam page"
+
+- id: "certcop-caiso"
+  name: "CertCop Chief AI Security Officer (CAISO)"
+  org: "CertCop"
+  category: "governance"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Enterprise AI security leadership, AI and biometric-system risks, controls and governance."
+  format: "CAISO-E001 exam; up to 90 multiple-choice/scenario questions, 180 minutes, 70% pass."
+  level: "Advanced"
+  prerequisites: null
+  url: "https://www.certcop.com/chief-ai-security-officer-caiso/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Scenario questions are knowledge questions; a practical lab assessment was not verified."
+  pricing:
+    amount: 495
+    currency: "USD"
+    basis: "exam"
+    details: "Initial exam voucher USD 495. USD currency and availability verified from the official product data."
+    purchase_url: "https://www.certcop.com/product/chief-ai-security-officer-caiso-exam-voucher-2/"
+  sources:
+    - url: "https://www.certcop.com/chief-ai-security-officer-caiso/"
+      label: "Official certification page"
+    - url: "https://www.certcop.com/product/chief-ai-security-officer-caiso-exam-voucher-2/"
+      label: "Official exam voucher and USD pricing"
+
+- id: "eccouncil-caipm"
+  name: "EC-Council Certified AI Program Manager (CAIPM)"
+  org: "EC-Council"
+  category: "governance"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "AI adoption, operations, automation and program leadership; AI security is one part of a broader program-management qualification."
+  format: "Remotely proctored knowledge exam; 100 multiple-choice questions, three hours."
+  level: "Intermediate"
+  prerequisites: "Mandatory: official EC-Council training, or approved eligibility application documenting two years of information-security experience. Self-study applicants must obtain approval before buying the voucher."
+  url: "https://www.eccouncil.org/ai-courses/certified-ai-program-manager-caipm/"
+  status: "beta"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The certification page explicitly offers beta-exam applications while the official store sells an initial exam voucher. The reviewed pages do not establish a completed transition to general availability; confirm scheduling and beta terms before buying."
+    - "Self-study eligibility adds a nonrefundable USD 100 application fee; this fee is included in official training fees. Voucher expires after one year."
+    - "Training labs do not by themselves imply a practical certification assessment."
+  pricing:
+    amount: 450
+    currency: "USD"
+    basis: "exam"
+    details: "Initial remotely proctored exam voucher USD 450; approved self-study applicants also pay USD 100 eligibility application fee."
+    purchase_url: "https://store.eccouncil.org/product/caipm-rps-examvoucher/"
+  sources:
+    - url: "https://www.eccouncil.org/ai-courses/certified-ai-program-manager-caipm/"
+      label: "Official certification page"
+    - url: "https://store.eccouncil.org/product/caipm-rps-examvoucher/"
+      label: "Official initial exam voucher"
+    - url: "https://cert.eccouncil.org/application-process-eligibility.html"
+      label: "Mandatory eligibility and application fee"
+    - url: "https://cert.eccouncil.org/certified-ai-program-manager.html"
+      label: "Official certification, beta label and exam policy"
+    - url: "https://cert.eccouncil.org/ai-program-beta-testing-form.html"
+      label: "Current beta application form"
+
+- id: "eccouncil-crage"
+  name: "EC-Council Certified Responsible AI Governance & Ethics (CRAGE)"
+  org: "EC-Council"
+  category: "governance"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Responsible AI governance, ethics, compliance and risk management, including AI security and privacy controls."
+  format: "Remotely proctored knowledge exam; 100 questions, three hours."
+  level: "Intermediate"
+  prerequisites: "Mandatory: official EC-Council training, or approved eligibility application documenting two years of information-security experience. Self-study applicants must obtain approval before buying the voucher."
+  url: "https://www.eccouncil.org/ai-courses/certified-responsible-ai-governance-ethics-crage/"
+  status: "beta"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The certification page explicitly offers beta-exam applications while the official store sells an initial exam voucher. The reviewed pages do not establish a completed transition to general availability; confirm scheduling and beta terms before buying."
+    - "Self-study eligibility adds a nonrefundable USD 100 application fee; this fee is included in official training fees. Voucher expires after one year."
+    - "Training labs do not by themselves imply a practical certification assessment."
+  pricing:
+    amount: 450
+    currency: "USD"
+    basis: "exam"
+    details: "Initial remotely proctored exam voucher USD 450; approved self-study applicants also pay USD 100 eligibility application fee."
+    purchase_url: "https://store.eccouncil.org/product/crage-rps-examvoucher/"
+  sources:
+    - url: "https://www.eccouncil.org/ai-courses/certified-responsible-ai-governance-ethics-crage/"
+      label: "Official certification page"
+    - url: "https://store.eccouncil.org/product/crage-rps-examvoucher/"
+      label: "Official initial exam voucher"
+    - url: "https://cert.eccouncil.org/application-process-eligibility.html"
+      label: "Mandatory eligibility and application fee"
+    - url: "https://cert.eccouncil.org/certified-responsible-ai-governance-ethics.html"
+      label: "Official certification, beta label and exam policy"
+    - url: "https://cert.eccouncil.org/ai-program-beta-testing-form.html"
+      label: "Current beta application form"
+
+- id: "gsdc-agentic-ai-risk-compliance"
+  name: "GSDC Certified Agentic AI Risk & Compliance Professional"
+  org: "Global Skill Development Council"
+  category: "governance"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Agentic AI for regulatory monitoring, risk, financial-crime compliance and audit, with responsible AI and model-risk controls."
+  format: "Online multiple-choice examination; official table lists 40 questions, 90 minutes and 65% pass."
+  level: "Intermediate"
+  prerequisites: "None mandatory; risk, compliance or audit familiarity recommended."
+  url: "https://www.gsdcouncil.org/certified-agentic-ai-risk-compliance-professional"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Governance/AI-assisted compliance focus, not security testing."
+    - "Course capstone should not be treated as a verified performance-based certification examination."
+  pricing:
+    amount: 400
+    currency: "USD"
+    basis: "bundle"
+    details: "Single-access learning bundle including exam and one retake; confirm final checkout terms."
+    purchase_url: "https://www.gsdcouncil.org/certified-agentic-ai-risk-compliance-professional"
+  sources:
+    - url: "https://www.gsdcouncil.org/certified-agentic-ai-risk-compliance-professional"
+      label: "Official programme or exam page"
+
+- id: "iapp-aigp"
+  name: "IAPP Artificial Intelligence Governance Professional (AIGP)"
+  org: "IAPP"
+  category: "governance"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Responsible AI governance, lifecycle risk, laws and organizational oversight; security is one concern within a broader qualification."
+  format: "Proctored knowledge exam; 100 questions, 2.75 hours plus a 15-minute break; Pearson VUE test center or OnVUE."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://www.iapp.org/certify/aigp"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Exam must be completed within one year of purchase. Two-year certification term requires 20 continuing-education credits."
+    - "Nonmember initial maintenance is included in the exam price; subsequent two-year maintenance USD 250. Member maintenance is covered by membership."
+  pricing:
+    amount: 799
+    currency: "USD"
+    basis: "exam"
+    details: "Nonmember USD 799; member USD 649. Training is separate."
+    purchase_url: "https://store.iapp.org/aigp-exam/"
+  sources:
+    - url: "https://www.iapp.org/certify/aigp"
+      label: "Official certification page"
+    - url: "https://store.iapp.org/aigp-exam/"
+      label: "Official exam purchase, pricing and maintenance"
+
+- id: "isaca-aaia"
+  name: "ISACA Advanced in AI Audit (AAIA)"
+  org: "ISACA"
+  category: "governance"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "AI auditing, operations, governance and risk; security controls are material within a broader audit qualification."
+  format: "Computer-based, proctored knowledge exam; 90 questions."
+  level: "Advanced"
+  prerequisites: "Mandatory: active CISA or an approved audit/accounting designation; non-CISA designations require an IT audit or IT advisory role focus."
+  url: "https://www.isaca.org/credentialing/aaia"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Six-month exam eligibility window after registration. Passing the exam alone does not satisfy prerequisite-credential and certification-application requirements."
+  pricing:
+    amount: 599
+    currency: "USD"
+    basis: "exam"
+    details: "Nonmember exam USD 599; member USD 459. Mandatory certification application fee USD 50 is additional."
+    purchase_url: "https://www.isaca.org/credentialing/aaia/plan-and-register"
+  sources:
+    - url: "https://www.isaca.org/credentialing/aaia"
+      label: "Official certification page"
+    - url: "https://www.isaca.org/credentialing/aaia/plan-and-register"
+      label: "Exam registration and pricing"
+
+- id: "isaca-aaig"
+  name: "ISACA Advanced in AI Governance (AAIG)"
+  org: "ISACA"
+  category: "governance"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Enterprise AI governance, data/AI architecture and integration; not a dedicated security specialization."
+  format: "Closed beta exam at PSI test centers only; 150 minutes, one attempt. No remote-proctored beta."
+  level: "Advanced"
+  prerequisites: "Mandatory for beta: selection by ISACA and active CGEIT or six years in an advisory/oversight enterprise IT governance role."
+  url: "https://www.isaca.org/credentialing/aaig"
+  status: "upcoming"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Current availability is recruitment for a future closed beta; no exam is offered on the verification date."
+    - "Applications close 2026-10-22; exam window 2026-12-11 to 2027-01-09. Results expected at Q1 2027 program launch."
+    - "Certification application and an additional application fee are required; fee amount was not specified in the beta invitation."
+  pricing:
+    amount: 399
+    currency: "USD"
+    basis: "bundle"
+    details: "Advertised closed-beta exam plus review-manual eBook; accepted candidates receive a private purchase link. Optional QAE USD 199."
+    purchase_url: null
+  sources:
+    - url: "https://www.isaca.org/credentialing/aaig"
+      label: "Official certification page"
+    - url: "https://engage.isaca.org/volunteeropportunities/opportunities-list-public/volunteer-opportunity-details?VolunteerOpportunityKey=7ff38991-79c8-461e-9f01-01a0b56e7eb3"
+      label: "Official beta application, eligibility and dates"
+
+- id: "isaca-aair"
+  name: "ISACA Advanced in AI Risk (AAIR)"
+  org: "ISACA"
+  category: "governance"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Managing AI risk across the lifecycle; includes security risk and controls within broader enterprise risk work."
+  format: "Computer-based, proctored knowledge exam; 90 questions."
+  level: "Advanced"
+  prerequisites: "Mandatory: an active designation from ISACA’s approved list, including CISA, CISM, CRISC, CGEIT or CDPSE and approved external credentials."
+  url: "https://www.isaca.org/credentialing/aair"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Six-month exam eligibility window after registration. Passing the exam alone does not satisfy prerequisite-credential and certification-application requirements."
+  pricing:
+    amount: 599
+    currency: "USD"
+    basis: "exam"
+    details: "Nonmember exam USD 599; member USD 459. Mandatory certification application fee USD 50 is additional."
+    purchase_url: "https://www.isaca.org/credentialing/aair/plan-and-register"
+  sources:
+    - url: "https://www.isaca.org/credentialing/aair"
+      label: "Official certification page"
+    - url: "https://www.isaca.org/credentialing/aair/plan-and-register"
+      label: "Exam registration and pricing"
+
+- id: "isaca-aaism"
+  name: "ISACA Advanced in AI Security Management (AAISM)"
+  org: "ISACA"
+  category: "governance"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Managing enterprise AI security, governance, AI risk and technical controls."
+  format: "Computer-based, proctored knowledge exam; 90 questions."
+  level: "Advanced"
+  prerequisites: "Mandatory: active CISM or CISSP. Relevant security/advisory and AI systems experience is recommended."
+  url: "https://www.isaca.org/credentialing/aaism"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Six-month exam eligibility window after registration. Passing the exam alone does not satisfy prerequisite-credential and certification-application requirements."
+  pricing:
+    amount: 599
+    currency: "USD"
+    basis: "exam"
+    details: "Nonmember exam USD 599; member USD 459. Mandatory certification application fee USD 50 is additional."
+    purchase_url: "https://www.isaca.org/credentialing/aaism/plan-and-register"
+  sources:
+    - url: "https://www.isaca.org/credentialing/aaism"
+      label: "Official certification page"
+    - url: "https://www.isaca.org/credentialing/aaism/plan-and-register"
+      label: "Exam registration and pricing"
+
+- id: "isc2-building-ai-strategy-certificate"
+  name: "ISC2 Building AI Strategy Certificate"
+  org: "ISC2"
+  category: "governance"
+  security_focus: "mixed"
+  assessment_type: "course-assessment"
+  focus: "Responsible and secure organizational AI adoption."
+  format: "Six courses with course assessments and completion badge; 16 CPE credits."
+  level: "Entry"
+  prerequisites: null
+  url: "https://www.isc2.org/professional-development/certificates/build-ai-strategy"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded: issuer identifies this as a certificate program with validations of completion, not the forthcoming AI security certification."
+    - "The page also calls this the AI Security Certificate; these names refer to the same six-course programme, not two credentials."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "No certification exam attempt is sold for this course certificate."
+    purchase_url: null
+  sources:
+    - url: "https://www.isc2.org/professional-development/certificates/build-ai-strategy"
+      label: "Official certificate and completion requirements"
+
+- id: "itcerts-ai-security-governance-lead-implementer"
+  name: "ITCERTS Certified AI Security and Governance Lead Implementer"
+  org: "ITCERTS Inc."
+  category: "governance"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Implementing organizational AI security and governance controls, policies, compliance and risk management."
+  format: "Online-proctored, closed-book exam; 40 multiple-choice questions, 60 minutes, 70% pass."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://itcerts.myshopify.com/collections/artificial-intelligence-certifications/products/certified-ai-security-and-governance-lead-implementer"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "USD currency verified in the official Shopify storefront data."
+    - "CAISP is an overlapping abbreviation used by several unrelated issuers; this offering is not PECB or PDSO."
+  pricing:
+    amount: 300
+    currency: "USD"
+    basis: "exam"
+    details: "Exam voucher includes study guide, practice test and two free retakes. Voucher valid for 180 days."
+    purchase_url: "https://itcerts.myshopify.com/collections/artificial-intelligence-certifications/products/certified-ai-security-and-governance-lead-implementer"
+  sources:
+    - url: "https://itcerts.myshopify.com/collections/artificial-intelligence-certifications/products/certified-ai-security-and-governance-lead-implementer"
+      label: "Official exam voucher, format and USD storefront data"
+
+- id: "mile2-caicso"
+  name: "Mile2 Certified AI Cybersecurity Officer (CAICSO)"
+  org: "Mile2"
+  category: "governance"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "Leading AI cybersecurity programs, managing AI threats and controls, and governing secure AI adoption."
+  format: "Online LMS exam; 100 multiple-choice questions, approximately two hours, 70% pass."
+  level: "Intermediate"
+  prerequisites: "Recommended: cybersecurity/security-management preparation or about 12 months of information-security management experience; no mandatory prerequisite verified."
+  url: "https://mile2.com/product/caicso-ultimate-combo/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The linked product is a training bundle, not an exam-only price. The official outline states that the exam may also be purchased without training; that standalone fee was not verified."
+    - "Hands-on preparation does not change the multiple-choice exam format."
+  pricing:
+    amount: 995
+    currency: "USD"
+    basis: "bundle"
+    details: "Ultimate Combo: one-year course materials, videos, workbook, study guide and practice exam, with two certification exam attempts. USD 995 verified in product price metadata."
+    purchase_url: "https://mile2.com/product/caicso-ultimate-combo/"
+  sources:
+    - url: "https://mile2.com/product/caicso-ultimate-combo/"
+      label: "Official bundle and USD product data"
+    - url: "https://mile2.com/wp-content/uploads/CAICSO-Web-Outline.pdf"
+      label: "Official syllabus and exam requirements"
+
+- id: "rtl-caisr"
+  name: "Certified Artificial Intelligence Security & Risk (CAISR)"
+  org: "Red Team Leaders"
+  category: "governance"
+  security_focus: "primary"
+  assessment_type: "knowledge"
+  focus: "AI security architecture, risk, governance, secure operations and lifecycle controls."
+  format: "Four-hour knowledge exam with 60 multiple-choice questions and 15 short written responses; practical preparation is encouraged but no lab exam is specified."
+  level: "Entry"
+  prerequisites: "Self-study of AI security, architecture, risk frameworks and governance is recommended; no formal prior credential was verified."
+  url: "https://courses.redteamleaders.com/exams/c4655ba3-b707-43ea-a6fd-e5db25169af0"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Distinct from 8kSec's Certified AI Security Researcher, despite sharing the CAISR abbreviation."
+    - "Securing AI is central; governance and risk are assessed alongside technical security."
+  pricing:
+    amount: 9.87
+    currency: "BRL"
+    basis: "exam"
+    details: "Current localized storefront price BRL 9.87 promotional / BRL 49.36 regular. An older free-promotion code is expired and is not represented as current."
+    purchase_url: "https://courses.redteamleaders.com/exams/c4655ba3-b707-43ea-a6fd-e5db25169af0"
+  sources:
+    - url: "https://courses.redteamleaders.com/exams/c4655ba3-b707-43ea-a6fd-e5db25169af0"
+      label: "Official exam description and storefront"
+    - url: "https://courses.redteamleaders.com/api/student/catalog"
+      label: "Public issuer catalog and price metadata"
+
+- id: "securiti-ai-security-governance-certification"
+  name: "Securiti AI Governance Certification"
+  org: "Securiti"
+  category: "governance"
+  security_focus: "mixed"
+  assessment_type: "course-assessment"
+  focus: "AI governance, privacy, security and compliance fundamentals."
+  format: "Free course of about 2–2.5 hours; eight modules with quizzes and a final course exam."
+  level: "Entry"
+  prerequisites: null
+  url: "https://education.securiti.ai/certifications/ai-governance/"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded: the issuer offers a certificate upon course completion and its associated quizzes/final assessment; a separate professional certification exam was not verified."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Free educational course; no separate certification-exam attempt is sold."
+    purchase_url: null
+  sources:
+    - url: "https://education.securiti.ai/certifications/ai-governance/"
+      label: "Official course, quizzes and completion certificate"
+
+- id: "pecb-iso-42001-lead-auditor"
+  name: "PECB ISO/IEC 42001 Lead Auditor"
+  org: "PECB"
+  category: "management-systems"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Auditing AI management systems against ISO/IEC 42001; security is one concern within broader management-system assurance."
+  format: "Open-book certification exam; 80 multiple-choice questions, three hours. Online and paper delivery listed in the official exam catalogue."
+  level: "Advanced"
+  prerequisites: "Full Lead Auditor: five years of professional experience, including two in AI, and 300 hours of audit activities. Provisional Auditor requires passing the exam without experience; other designation levels have different requirements."
+  url: "https://pecb.com/en/education-and-certification-for-individuals/iso-iec-42001/iso-iec-42001-lead-auditor"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The professional designation is distinct from the course’s 31-CPD attendance attestation."
+    - "Exam and certification application fees are included when buying the advertised training route; a free retake is available within 12 months after failing."
+  pricing:
+    amount: 790
+    currency: "USD"
+    basis: "bundle"
+    details: "DataConfo Academy self-study training and PECB exam bundle, advertised worldwide. Registration and dates are confirmed by a person; applicable taxes appear at checkout. This is a partner bundle, not a universal PECB standalone exam price."
+    purchase_url: "https://academy.dataconfo.com/certification/iso-iec-42001-lead-auditor/"
+  sources:
+    - url: "https://pecb.com/en/education-and-certification-for-individuals/iso-iec-42001/iso-iec-42001-lead-auditor"
+      label: "Official certification page"
+    - url: "https://pecb.com/en/exam-events"
+      label: "Official exam-event registration route"
+    - url: "https://help.pecb.com/list-of-pecb-exams/"
+      label: "Official exam catalogue and embedded public exam-format data"
+    - url: "https://academy.dataconfo.com/certification/iso-iec-42001-lead-auditor/"
+      label: "DataConfo partner training/exam bundle and explicit US-dollar pricing"
+
+- id: "aws-certified-ai-practitioner"
+  name: "AWS Certified AI Practitioner (AIF-C01)"
+  org: "Amazon Web Services"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "General AI literacy; security is a limited part of the combined security, compliance and governance domain."
+  format: "65 multiple-choice/multiple-response questions; 90 minutes; Pearson VUE test centre or online proctored."
+  level: "Entry"
+  prerequisites: "No mandatory prerequisite; basic AI and AWS familiarity recommended."
+  url: "https://aws.amazon.com/certification/certified-ai-practitioner/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The 14% security/compliance/governance domain is not 14% security alone."
+  pricing:
+    amount: 100
+    currency: "USD"
+    basis: "exam"
+    details: "One exam attempt; local taxes and regional pricing may apply."
+    purchase_url: "https://aws.amazon.com/certification/certified-ai-practitioner/"
+  sources:
+    - url: "https://aws.amazon.com/certification/certified-ai-practitioner/"
+      label: "Official programme or exam page"
+    - url: "https://docs.aws.amazon.com/aws-certification/latest/ai-practitioner-01/ai-practitioner-01-domain5.html"
+      label: "Official programme or exam page"
+
+- id: "aws-generative-ai-developer-professional"
+  name: "AWS Certified Generative AI Developer – Professional (AIP-C01)"
+  org: "Amazon Web Services"
+  category: "vendor-ai"
+  security_focus: "mixed"
+  assessment_type: "knowledge"
+  focus: "Production generative AI application development with a substantial combined safety, security and governance component."
+  format: "75 multiple-choice/multiple-response questions; 180 minutes; Pearson VUE test centre or online proctored."
+  level: "Advanced"
+  prerequisites: "Recommended: two years building production applications and one year implementing generative AI solutions."
+  url: "https://aws.amazon.com/certification/certified-generative-ai-developer-professional/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "AI Safety, Security, and Governance is a combined 20% domain; this is not a dedicated AI security exam."
+  pricing:
+    amount: 300
+    currency: "USD"
+    basis: "exam"
+    details: "One exam attempt; local taxes and regional pricing may apply."
+    purchase_url: "https://aws.amazon.com/certification/certified-generative-ai-developer-professional/"
+  sources:
+    - url: "https://aws.amazon.com/certification/certified-generative-ai-developer-professional/"
+      label: "Official programme or exam page"
+    - url: "https://docs.aws.amazon.com/aws-certification/latest/ai-professional-01/ai-professional-01.html"
+      label: "Official programme or exam page"
+
+- id: "aws-ml-engineer-associate"
+  name: "AWS Certified Machine Learning Engineer – Associate (MLA-C02 beta; MLA-C01 in selected languages)"
+  org: "Amazon Web Services"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Production ML engineering; monitoring, security and responsible AI form a subset of a broader implementation credential."
+  format: "English MLA-C02 beta: 85 questions, 170 minutes. MLA-C01: 65 questions, 130 minutes. Pearson VUE proctored."
+  level: "Intermediate"
+  prerequisites: "Recommended: at least one year of ML engineering and AWS service experience."
+  url: "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/"
+  status: "beta"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "English MLA-C01 delivery ended September 28, 2026; MLA-C02 beta delivery began September 29."
+    - "The combined monitoring/maintenance/security domain is 24%; its security subset is not separately weighted."
+    - "Official overview table contains an apparent ME1-C02 typo; heading and exam guide use MLA-C02."
+  pricing:
+    amount: 75
+    currency: "USD"
+    basis: "exam"
+    details: "English MLA-C02 beta fee. MLA-C01 remains USD150 in Japanese, Korean and Simplified Chinese."
+    purchase_url: "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/"
+  sources:
+    - url: "https://aws.amazon.com/certification/certified-machine-learning-engineer-associate/"
+      label: "Official programme or exam page"
+    - url: "https://docs.aws.amazon.com/aws-certification/latest/machine-learning-engineer-associate-02/machine-learning-engineer-associate-02.html"
+      label: "Official programme or exam page"
+
+- id: "certnexus-caip"
+  name: "CertNexus Certified Artificial Intelligence Practitioner (CAIP; AIP-210)"
+  org: "CertNexus"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "General applied AI/ML modelling and operations; secure ML pipelines are a limited objective."
+  format: "80 scored and 10 trial questions; 120-minute appointment including 10-minute tutorial/agreement; Pearson VUE proctored."
+  level: "Intermediate"
+  prerequisites: "No formal eligibility prerequisites."
+  url: "https://store.certnexus.com/index.php/aip-210-exam-voucher.html"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Security objective 4.2 sits inside the broader 30% Operationalizing ML Models domain; 30% is not a security weighting."
+  pricing:
+    amount: 367.5
+    currency: "USD"
+    basis: "exam"
+    details: "One AIP-210 exam voucher; store product metadata explicitly identifies USD."
+    purchase_url: "https://store.certnexus.com/index.php/aip-210-exam-voucher.html"
+  sources:
+    - url: "https://store.certnexus.com/index.php/aip-210-exam-voucher.html"
+      label: "Official programme or exam page"
+    - url: "https://iris.logicaloperations.com/coursefiles/CNX0016_blueprint/CAIP_210_Blueprint.pdf"
+      label: "Official programme or exam page"
+
+- id: "databricks-generative-ai-engineer-associate"
+  name: "Databricks Certified Generative AI Engineer Associate"
+  org: "Databricks"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "LLM/RAG and agent application engineering; an 8% governance domain includes masking and malicious-input guardrails."
+  format: "45 scored multiple-choice/multiple-selection questions; 90 minutes; proctored online or test centre."
+  level: "Intermediate"
+  prerequisites: "None mandatory; training and six months of practical experience recommended."
+  url: "https://www.databricks.com/learn/certification/genai-engineer-associate"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Security is a subset of governance and development, not the central assessment."
+    - "Practical training and agent projects should not be mistaken for a hands-on certification exam."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "Official page and March 2026 guide advertise $200; retrieved documents do not explicitly identify the dollar currency."
+    purchase_url: "https://www.databricks.com/learn/certification/genai-engineer-associate"
+  sources:
+    - url: "https://www.databricks.com/learn/certification/genai-engineer-associate"
+      label: "Official programme or exam page"
+    - url: "https://www.databricks.com/sites/default/files/2026-03/Databricks-Certified-Generative-AI-Engineer-Associate-Exam-Guide-Mar26.pdf"
+      label: "Official programme or exam page"
+
+- id: "eccouncil-aie"
+  name: "EC-Council Artificial Intelligence Essentials (AIE)"
+  org: "EC-Council"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Foundational AI literacy, tools, prompting and responsible use; security concerns are a limited part of the curriculum."
+  format: "Exam 112-59: 75 multiple-choice questions, two hours. The verified bundle includes remote proctoring."
+  level: "Entry"
+  prerequisites: "No predefined eligibility requirements; no technical background required."
+  url: "https://www.eccouncil.org/ai-courses/artificial-intelligence-essentials-aie/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "A distinct certification exam is documented; this is broader AI literacy rather than a dedicated AI-security qualification."
+    - "Current store bundle is USD 299. The eligibility page retains an older USD 199 courseware-bundle reference; use the current store price. A USD 99 product is explicitly a retake, not the initial attempt."
+  pricing:
+    amount: 299
+    currency: "USD"
+    basis: "bundle"
+    details: "Courseware and videos for 12 months, labs for six months, and an initial remotely proctored exam voucher expiring after 12 months. Standalone initial-attempt price was not verified."
+    purchase_url: "https://store.eccouncil.org/product/aie-bundle/"
+  sources:
+    - url: "https://www.eccouncil.org/ai-courses/artificial-intelligence-essentials-aie/"
+      label: "Official certification page"
+    - url: "https://iclass.eccouncil.org/our-courses/artificial-intelligence-essentials/"
+      label: "Official exam format"
+    - url: "https://store.eccouncil.org/product/aie-bundle/"
+      label: "Current initial exam bundle and USD product data"
+    - url: "https://cert.eccouncil.org/application-process-eligibility.html"
+      label: "Eligibility requirements"
+
+- id: "gcp-generative-ai-leader"
+  name: "Google Cloud Generative AI Leader"
+  org: "Google Cloud"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Business use of generative AI; secure/responsible AI is a small part of adoption strategy."
+  format: "50–60 multiple-choice questions; 90 minutes; online or test-centre proctored exam."
+  level: "Entry"
+  prerequisites: "None."
+  url: "https://cloud.google.com/learn/certification/generative-ai-leader"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The 15% business-strategy domain includes secure AI; it is not a 15% security domain."
+  pricing:
+    amount: 99
+    currency: "USD"
+    basis: "exam"
+    details: "One exam attempt; taxes extra. Official voucher store lists USD99."
+    purchase_url: "https://googlecloudexamstore.pearsonvue.com/p/GGLVCH-GCCGAIL"
+  sources:
+    - url: "https://cloud.google.com/learn/certification/generative-ai-leader"
+      label: "Official programme or exam page"
+    - url: "https://googlecloudexamstore.pearsonvue.com/p/GGLVCH-GCCGAIL"
+      label: "Official programme or exam page"
+    - url: "https://services.google.com/fh/files/misc/generative_ai_leader_exam_guide_english.pdf"
+      label: "Official programme or exam page"
+
+- id: "gcp-professional-machine-learning-engineer"
+  name: "Google Cloud Professional Machine Learning Engineer"
+  org: "Google Cloud"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "ML and generative AI engineering; security controls, malicious prompts and data-exfiltration prevention are limited objectives."
+  format: "50–60 multiple-choice/multiple-select questions; two hours; proctored online or test centre."
+  level: "Advanced"
+  prerequisites: "None mandatory; recommended three years industry experience including one year with Google Cloud."
+  url: "https://cloud.google.com/learn/certification/machine-learning-engineer"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "June 1, 2026 exam guide includes AI security within broader monitoring and maintenance; not a dedicated security credential."
+  pricing:
+    amount: 200
+    currency: "USD"
+    basis: "exam"
+    details: "One exam attempt; taxes extra."
+    purchase_url: "https://cloud.google.com/learn/certification/machine-learning-engineer"
+  sources:
+    - url: "https://cloud.google.com/learn/certification/machine-learning-engineer"
+      label: "Official programme or exam page"
+    - url: "https://services.google.com/fh/files/misc/professional_machine_learning_engineer_exam_guide_english_new.pdf"
+      label: "Official programme or exam page"
+
+- id: "lf-pytorch-certified-associate"
+  name: "PyTorch Certified Associate (PTCA)"
+  org: "Linux Foundation / PyTorch Foundation"
+  category: "vendor-ai"
+  security_focus: "none"
+  assessment_type: "knowledge"
+  focus: "PyTorch fundamentals, models, performance and data handling; no explicit security/governance objectives."
+  format: "Online proctored multiple-choice exam; 120 minutes."
+  level: "Entry"
+  prerequisites: "None."
+  url: "https://training.linuxfoundation.org/certification/pytorch-certified-associate-ptca/"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded as a general ML software credential outside the AI security/governance scope."
+    - "Two-year certification validity."
+  pricing:
+    amount: 250
+    currency: "USD"
+    basis: "exam"
+    details: "Exam-only purchase includes one retake and 12-month exam eligibility."
+    purchase_url: "https://checkout.ed.linuxfoundation.org/cart?sku=PTCA"
+  sources:
+    - url: "https://training.linuxfoundation.org/certification/pytorch-certified-associate-ptca/"
+      label: "Official programme or exam page"
+    - url: "https://checkout.ed.linuxfoundation.org/cart?sku=PTCA"
+      label: "Official programme or exam page"
+
+- id: "azure-ai-apps-and-agents-developer-associate"
+  name: "Microsoft Certified: Azure AI Apps and Agents Developer Associate (AI-103)"
+  org: "Microsoft"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "AI application and agent development; includes identity/network controls, guardrails, safety evaluation, traceability and human approval workflows."
+  format: "120-minute proctored exam; interactive components may be included."
+  level: "Intermediate"
+  prerequisites: "Recommended: Python development and familiarity with Azure, generative AI and Microsoft Foundry."
+  url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Security is a subset of broader app development objectives; it has no standalone published weighting."
+    - "AI-103 succeeds the AI-102 pathway; AI-102 retired June 30, 2026."
+  pricing:
+    amount: 165
+    currency: "USD"
+    basis: "exam"
+    details: "Standard United States Associate exam fee from Microsoft's official regional table; confirm local price at scheduling."
+    purchase_url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/"
+  sources:
+    - url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-apps-and-agents-developer-associate/"
+      label: "Official programme or exam page"
+    - url: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-103"
+      label: "Official programme or exam page"
+    - url: "https://arch-center.azureedge.net/Learning/Credentials/Microsoft-Certification-exam-prices-effective-August-1,-2024.pdf"
+      label: "Official programme or exam page"
+
+- id: "azure-ai-fundamentals-ai-901"
+  name: "Microsoft Certified: Azure AI Fundamentals (AI-901)"
+  org: "Microsoft"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Foundational Azure AI development; privacy/security is one responsible AI consideration."
+  format: "Proctored Microsoft certification exam; use the scheduling page for current delivery details."
+  level: "Entry"
+  prerequisites: "Recommended: Python syntax and basic Azure resources; no prior certification required."
+  url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Minor security component; this does not validate security engineering."
+    - "Current exam is AI-901; AI-900 retired June 30, 2026."
+  pricing:
+    amount: 99
+    currency: "USD"
+    basis: "exam"
+    details: "Standard United States Fundamentals exam fee from Microsoft's official regional price table; scheduling determines local price/taxes."
+    purchase_url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+  sources:
+    - url: "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/"
+      label: "Official programme or exam page"
+    - url: "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/ai-901"
+      label: "Official programme or exam page"
+    - url: "https://arch-center.azureedge.net/Learning/Credentials/Microsoft-Certification-exam-prices-effective-August-1,-2024.pdf"
+      label: "Official programme or exam page"
+
+- id: "nvidia-nca-aiio"
+  name: "NVIDIA-Certified Associate – AI Infrastructure and Operations (NCA-AIIO)"
+  org: "NVIDIA"
+  category: "vendor-ai"
+  security_focus: "none"
+  assessment_type: "knowledge"
+  focus: "AI computing infrastructure and operations; no explicit AI security or governance objectives verified."
+  format: "50 questions; 60 minutes; remotely proctored."
+  level: "Entry"
+  prerequisites: "Basic data-centre infrastructure knowledge expected."
+  url: "https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-operations-associate/"
+  status: "excluded"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Excluded from the AI security catalogue count because the verified blueprint is general infrastructure."
+    - "A personnel certification, but outside this catalogue's security/governance scope."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "Issuer advertises $125; currency code not explicit in the retrieved exam page."
+    purchase_url: "https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-operations-associate/"
+  sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/ai-infrastructure-operations-associate/"
+      label: "Official programme or exam page"
+
+- id: "nvidia-nca-genl"
+  name: "NVIDIA-Certified Associate – Generative AI LLMs (NCA-GENL)"
+  org: "NVIDIA"
+  category: "vendor-ai"
+  security_focus: "none"
+  assessment_type: "knowledge"
+  focus: "General LLM development with a 10% trustworthy AI domain covering ethics, consent, privacy and bias."
+  format: "50–60 questions; 60 minutes; remotely proctored."
+  level: "Entry"
+  prerequisites: null
+  url: "https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/"
+  status: "available"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Retained as governance-adjacent comparison. Explicit security testing objectives were not verified; trustworthy AI is broader than security."
+    - "Included as a responsible-AI/governance comparison: the official objectives allocate 10% to Trustworthy AI, including ethics, privacy/consent and bias. This is not a verified AI-security domain."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "Issuer advertises $125; currency code not explicit in retrieved exam page."
+    purchase_url: "https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/"
+  sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/generative-ai-llm-associate/"
+      label: "Official programme or exam page"
+
+- id: "nvidia-ncp-aai"
+  name: "NVIDIA-Certified Professional – Agentic AI (NCP-AAI)"
+  org: "NVIDIA"
+  category: "vendor-ai"
+  security_focus: "minor"
+  assessment_type: "knowledge"
+  focus: "Agent architecture, deployment and evaluation with limited guardrail, human oversight and responsible AI coverage."
+  format: "Advertised: 60–70 questions; 120 minutes; remotely proctored."
+  level: "Intermediate"
+  prerequisites: "Issuer expects one to two years of AI/ML work and production agent experience; formal enforcement not verified."
+  url: "https://www.nvidia.com/en-us/learn/certification/agentic-ai-professional/"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "The same official page displays both 'Coming soon' and 'Register for Exam'; present delivery status is unresolved."
+    - "Published objectives are broader agent engineering, not a dedicated adversarial security or frontier safety assessment."
+  pricing:
+    amount: null
+    currency: null
+    basis: "exam"
+    details: "Advertised $200; currency code and current exam booking availability not verified."
+    purchase_url: "https://www.nvidia.com/en-us/learn/certification/agentic-ai-professional/"
+  sources:
+    - url: "https://www.nvidia.com/en-us/learn/certification/agentic-ai-professional/"
+      label: "Official programme or exam page"
+
+- id: "oci-ai-foundations-associate"
+  name: "Oracle Cloud Infrastructure AI Foundations Associate (1Z0-1122-26)"
+  org: "Oracle"
+  category: "vendor-ai"
+  security_focus: "none"
+  assessment_type: "unconfirmed"
+  focus: "General OCI AI foundations; current security objectives were not accessible for verification."
+  format: "Knowledge exam; detailed format not verified."
+  level: "Entry"
+  prerequisites: null
+  url: "https://learn.oracle.com/ols/learning-path/become-an-oci-ai-foundations-associate/146553/163544"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Officially indexed 2026 exam name/code verified; MyLearn returned an incomplete shell/site-unavailable response."
+    - "Do not carry forward earlier free pricing, question count or security claims without the current exam page."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Current exam price and booking availability not independently verified from accessible official content."
+    purchase_url: null
+  sources:
+    - url: "https://learn.oracle.com/ols/learning-path/become-an-oci-ai-foundations-associate/146553/163544"
+      label: "Official programme or exam page"
+
+- id: "oci-generative-ai-professional"
+  name: "Oracle Cloud Infrastructure Generative AI Professional (1Z0-1127; legacy listing)"
+  org: "Oracle"
+  category: "vendor-ai"
+  security_focus: "none"
+  assessment_type: "unconfirmed"
+  focus: "OCI generative AI development; current security scope and exam replacement status remain unverified."
+  format: "Knowledge exam; detailed format not verified."
+  level: "Intermediate"
+  prerequisites: null
+  url: "https://learn.oracle.com/ols/learning-path/become-an-oci-generative-ai-professional-2025/118071/147863"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Legacy 2025 learning-path URL remains indexed, but its public content did not expose current exam details."
+    - "Oracle also indexes OCI Enterprise AI Professional 1Z0-1158-26. A formal retirement/replacement relationship was not verified."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Current public exam price not verified."
+    purchase_url: null
+  sources:
+    - url: "https://learn.oracle.com/ols/learning-path/become-an-oci-generative-ai-professional-2025/118071/147863"
+      label: "Official programme or exam page"
+    - url: "https://mylearn.oracle.com/ou/exam/oracle-cloud-infrastructure-enterprise-ai-professional-1z0-1158-26/163295/161772/271326"
+      label: "Official programme or exam page"
+
+- id: "snowflake-snowpro-specialty-gen-ai"
+  name: "SnowPro Specialty: Gen AI (GES-C02)"
+  org: "Snowflake"
+  category: "vendor-ai"
+  security_focus: "none"
+  assessment_type: "unconfirmed"
+  focus: "Snowflake generative AI, Cortex, model deployment and document processing; explicit security objectives were not verified."
+  format: "Certification exam; current item count, duration and security blueprint were not exposed by the accessible page."
+  level: "Intermediate"
+  prerequisites: "Recommended one year of Gen AI work with Snowflake; Python, data engineering and SQL familiarity. Current mandatory prerequisite certification not verified."
+  url: "https://learn.snowflake.com/en/certifications/snowpro-GenAI-C02/"
+  status: "unverified"
+  launched: null
+  last_verified: "2026-10-09"
+  notes:
+    - "Retained as an unverified vendor comparison rather than counted as AI security."
+    - "Prior USD375 and prerequisite claims were removed because the retrieved page did not substantiate them for this exam."
+  pricing:
+    amount: null
+    currency: null
+    basis: "unknown"
+    details: "Current Gen AI Specialty fee not verified. Page FAQ quotes USD375 for the Advanced series and cannot substantiate a GES-C02 fee."
+    purchase_url: "https://learn.snowflake.com/en/certifications/snowpro-GenAI-C02/"
+  sources:
+    - url: "https://learn.snowflake.com/en/certifications/snowpro-GenAI-C02/"
+      label: "Official programme or exam page"
